@@ -1,0 +1,136 @@
+import React from 'react';
+import { LayoutGrid, GraduationCap, ChevronRight, ArrowRight, MessageCircle, Layers } from 'lucide-react';
+import { PRODUCTS } from '@/lib/constants';
+
+const ProductShowcase = () => {
+  return (
+    <section id="products" className="py-24 bg-slate-50 border-t border-slate-200">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <span className="text-blue-600 font-extrabold tracking-widest uppercase text-sm mb-3 block">Danh mục Sản phẩm</span>
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight">
+            Bạn đang tìm kiếm điều gì?
+          </h2>
+          <p className="text-lg text-slate-500">
+            Tất cả sản phẩm đều được thiết kế độc lập. Hãy chọn đúng công cụ bạn cần để bổ trợ cho bé.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
+          
+          {/* Column 1: Single Apps */}
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 relative overflow-hidden group h-full flex flex-col">
+            <div className="h-2 bg-orange-400 w-full absolute top-0 left-0"></div>
+            <div className="p-8 flex flex-col h-full">
+              <div className="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6">
+                <LayoutGrid className="w-7 h-7" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Kho sách & Ứng dụng</h3>
+              <p className="text-slate-500 text-sm mb-6">Các sản phẩm lẻ giúp bé làm quen tiếng Anh nhẹ nhàng.</p>
+              
+              <div className="space-y-3 mt-auto">
+                {PRODUCTS.single.map((item, idx) => (
+                  <div key={idx} className="flex items-center justify-between p-4 bg-orange-50 rounded-xl hover:bg-orange-500 hover:text-white transition group/item cursor-pointer border border-orange-100">
+                    <div className="flex items-center gap-3">
+                      <div className="bg-white p-2 rounded-lg text-orange-500 shadow-sm"><item.icon className="w-5 h-5" /></div>
+                      <div>
+                        <h4 className="font-bold text-sm">{item.title}</h4>
+                        <p className="text-[10px] opacity-80">{item.desc}</p>
+                      </div>
+                    </div>
+                    <ChevronRight className="w-5 h-5 text-orange-300 group-hover/item:text-white" />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="p-6 pt-0 mt-2">
+               <a href="#" className="block text-center text-xs font-bold text-slate-400 hover:text-orange-500">Xem tất cả sách &rarr;</a>
+            </div>
+          </div>
+
+          {/* Column 2: Bundle (Highlighted) */}
+          <div className="bg-slate-900 rounded-2xl border border-slate-700 shadow-2xl relative overflow-hidden transform md:-translate-y-4 md:scale-105 z-10 flex flex-col h-full">
+            <div className="absolute top-0 right-0 bg-gradient-to-l from-blue-600 to-transparent w-full h-full opacity-20 pointer-events-none"></div>
+            <div className="absolute top-4 right-4 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-lg">Phổ biến nhất</div>
+            
+            <div className="p-8 flex flex-col h-full relative">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-600/30">
+                <Layers className="w-8 h-8" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">Giải pháp Toàn diện</h3>
+              <p className="text-slate-300 text-sm mb-6">Các bộ giải pháp kết hợp Tech-Touch-Human để đảm bảo đầu ra.</p>
+              
+              <div className="space-y-4 mt-auto">
+                <div className="flex items-center justify-between p-4 bg-slate-800 rounded-xl hover:bg-blue-600 transition group/item cursor-pointer border border-slate-600 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-900/50">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-blue-900/50 p-2 rounded-lg text-blue-400 group-hover/item:text-white group-hover/item:bg-white/20">
+                      <PRODUCTS.bundle.icon className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white text-base">{PRODUCTS.bundle.title}</h4>
+                      <p className="text-[11px] text-slate-400 group-hover/item:text-blue-100">{PRODUCTS.bundle.desc}</p>
+                    </div>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-slate-500 group-hover/item:text-white" />
+                </div>
+              </div>
+
+              <div className="space-y-4 mt-auto">
+                <div className="flex items-center justify-between p-4 bg-slate-800 rounded-xl hover:bg-blue-600 transition group/item cursor-pointer border border-slate-600 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-900/50">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-blue-900/50 p-2 rounded-lg text-blue-400 group-hover/item:text-white group-hover/item:bg-white/20">
+                      <PRODUCTS.bundle.icon className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white text-base">{PRODUCTS.bundle.title}</h4>
+                      <p className="text-[11px] text-slate-400 group-hover/item:text-blue-100">{PRODUCTS.bundle.desc}</p>
+                    </div>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-slate-500 group-hover/item:text-white" />
+                </div>
+              </div>
+            </div>
+             <div className="p-8 pt-0 mt-2 relative">
+                <button className="w-full text-blue-400 hover:text-white text-sm font-bold flex items-center justify-center gap-2 py-3 rounded-lg hover:bg-white/10 transition">
+                  <MessageCircle className="w-4 h-4" /> Cần tư vấn chọn gói?
+                </button>
+           </div>
+          </div>
+
+          {/* Column 3: Coaching */}
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 relative overflow-hidden group h-full flex flex-col">
+            <div className="h-2 bg-purple-500 w-full absolute top-0 left-0"></div>
+            <div className="p-8 flex flex-col h-full">
+              <div className="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6">
+                <GraduationCap className="w-7 h-7" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Đào tạo Chuyên sâu</h3>
+              <p className="text-slate-500 text-sm mb-6">Dịch vụ huấn luyện 1-1 và các Workshop kỹ năng đặc biệt.</p>
+              
+              <div className="space-y-3 mt-auto">
+                {PRODUCTS.training.map((item, idx) => (
+                  <div key={idx} className="flex items-center justify-between p-4 bg-purple-50 rounded-xl hover:bg-purple-600 hover:text-white transition group/item cursor-pointer border border-purple-100">
+                    <div className="flex items-center gap-3">
+                      <div className="bg-white p-2 rounded-lg text-purple-600 shadow-sm"><item.icon className="w-5 h-5" /></div>
+                      <div>
+                        <h4 className="font-bold text-sm">{item.title}</h4>
+                        <p className="text-[10px] opacity-80">{item.desc}</p>
+                      </div>
+                    </div>
+                    <ChevronRight className="w-5 h-5 text-purple-300 group-hover/item:text-white" />
+                  </div>
+                ))}
+              </div>
+            </div>
+             <div className="p-6 pt-0 mt-2">
+                <a href="#" className="block text-center text-xs font-bold text-slate-400 hover:text-purple-600">Liên hệ Booking &rarr;</a>
+           </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProductShowcase;
