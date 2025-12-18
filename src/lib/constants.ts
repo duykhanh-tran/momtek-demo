@@ -22,7 +22,7 @@ export const HERO_CONTENT = {
   title_1: "Mẹ tự tin dạy con tiếng Anh thành công ",
   title_highlight: "ngay cả khi bắt đầu từ con số 0 ",
   desc: "Hệ sinh thái toàn diện giúp biến mỗi giờ học tại nhà thành khoảnh khắc gắn kết đầy niềm vui.",
-  bg_image: "https://images.unsplash.com/photo-1544776193-ade277d74f0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+  bg_image: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1920&auto=format&fit=crop"
 };
 
 export const SOCIAL_PROOF_LOGOS = [
@@ -43,25 +43,25 @@ export const RESOURCES = [
   {
     tag: "Kiến thức nền tảng", title: "Lộ trình 7 ngày vàng bắt đầu cùng con",
     desc: "Hướng dẫn từng bước thiết lập môi trường và tâm lý để mẹ tự tin dạy bé.",
-    image: "https://images.unsplash.com/photo-1544776193-ade277d74f0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
     color: "blue", icon: Star
   },
   {
     tag: "Kỹ năng thực chiến", title: "Bí quyết \"Tắm ngôn ngữ\" hiệu quả",
     desc: "Cách dùng loa, bài hát và các thiết bị hỗ trợ để con thẩm thấu tự nhiên.",
-    image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop",
     color: "green", icon: Video
   },
   {
     tag: "Hỏi đáp Chuyên gia", title: "Con không chịu hợp tác thì làm sao?",
     desc: "Giải đáp từ chuyên gia tâm lý trẻ em Momtek về các tình huống khó xử.",
-    image: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?q=80&w=800&auto=format&fit=crop",
     color: "orange", icon: MessageCircleQuestion
   },
   {
     tag: "Podcast Tâm lý", title: "Vượt qua nỗi sợ phát âm sai",
     desc: "Lời khuyên giúp mẹ tự tin mở miệng nói chuyện và đồng hành cùng con.",
-    image: "https://images.unsplash.com/photo-1478737270239-2f02b77ac6d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=800&auto=format&fit=crop",
     color: "purple", icon: Headphones
   },
 ];
@@ -114,13 +114,13 @@ export const FOUNDERS = [
   {
     name: "Ms. Thu Hằng", role: "Co-Founder", title: "Người truyền lửa",
     quote: "Giáo dục không chỉ là đổ đầy kiến thức, mà là thắp lên ngọn lửa.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop",
     color: "orange", icon: Heart
   },
   {
     name: "TS. Nguyễn Văn A", role: "Co-Founder", title: "Kiến trúc sư chương trình",
     quote: "Chúng tôi đưa những phương pháp sư phạm tiên tiến nhất thế giới vào Momtek.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop",
     color: "blue", icon: Award
   }
 ];
