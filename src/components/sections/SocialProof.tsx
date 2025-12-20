@@ -10,7 +10,7 @@ const SocialProof = () => {
           Được tin tưởng và nhắc đến bởi
         </h3>
         
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div className="flex  flex-nowrap justify-center items-center gap-8 md:gap-12">
           {SOCIAL_PROOF_LOGOS.map((logo, index) => (
             <div key={index} className="relative w-28 h-16">
               <Image 

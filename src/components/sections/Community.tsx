@@ -18,8 +18,8 @@ const Community = () => {
           <ThumbsUp className="w-4 h-4" /> Theo dõi Momtek trên Mạng xã hội
         </a>
 
-        {/* Stats */}
-        <div className="mb-24 mt-12 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4">
+        {/* Stats - Giữ nguyên layout grid hoặc flex wrap cho stats vì nó nhỏ */}
+        <div className="mb-12 md:mb-24 mt-12 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4">
            <div className="flex justify-center items-center space-x-3">
              <div className="text-3xl font-bold">50K+</div>
              <div className="text-sm text-gray-500 text-left">Followers</div>
@@ -28,16 +28,16 @@ const Community = () => {
              <div className="text-3xl font-bold text-red-600">1M+</div>
              <div className="text-sm text-gray-500 text-left">Views</div>
            </div>
-           <div className="flex justify-center items-center space-x-3">
+           <div className="col-span-2 md:col-span-1 flex justify-center items-center space-x-3">
              <div className="text-3xl font-bold text-blue-600">35K+</div>
              <div className="text-sm text-gray-500 text-left">Members</div>
            </div>
         </div>
 
-        {/* Social Cards */}
-        <div className="mt-12 grid gap-8 md:grid-cols-3 items-stretch">
+        {/* Social Cards - Mobile: Horizontal Scroll */}
+        <div className="mt-12 flex md:grid md:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-visible items-stretch snap-x snap-mandatory px-6 md:px-0 -mx-6 md:mx-0 pb-8 md:pb-0 no-scrollbar">
           {/* Card 1: Tiktok */}
-          <a href="https://www.tiktok.com" className="card overflow-hidden group rounded-xl shadow-sm ring-1 ring-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full">
+          <a href="#" className="min-w-[85vw] md:min-w-0 snap-center card overflow-hidden group rounded-xl shadow-sm ring-1 ring-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full bg-white">
             <div className="relative w-full aspect-video overflow-hidden bg-black">
               <div className="absolute inset-0 bg-black/20 flex items-center justify-center transition duration-300 group-hover:bg-black/40">
                 <PlayCircle className="text-white w-12 h-12 opacity-80 group-hover:scale-110 transition" />
@@ -50,7 +50,7 @@ const Community = () => {
           </a>
           
           {/* Card 2: Youtube */}
-          <a href="https://www.youtube.com" className="card overflow-hidden group rounded-xl shadow-sm ring-1 ring-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full">
+          <a href="#" className="min-w-[85vw] md:min-w-0 snap-center card overflow-hidden group rounded-xl shadow-sm ring-1 ring-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full bg-white">
             <div className="relative w-full aspect-video overflow-hidden bg-red-900">
                <div className="absolute inset-0 bg-black/20 flex items-center justify-center transition duration-300 group-hover:bg-black/40">
                 <PlayCircle className="text-white w-12 h-12 opacity-80 group-hover:scale-110 transition" />
@@ -63,7 +63,7 @@ const Community = () => {
           </a>
 
           {/* Card 3: Facebook */}
-          <a href="https://www.facebook.com" className="card overflow-hidden group rounded-xl shadow-sm ring-1 ring-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full">
+          <a href="#" className="min-w-[85vw] md:min-w-0 snap-center card overflow-hidden group rounded-xl shadow-sm ring-1 ring-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full bg-white">
             <div className="relative w-full aspect-video overflow-hidden bg-blue-900">
                <div className="absolute inset-0 bg-black/20 flex items-center justify-center transition duration-300 group-hover:bg-black/40">
                 <PlayCircle className="text-white w-12 h-12 opacity-80 group-hover:scale-110 transition" />

@@ -4,46 +4,58 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth; /* Cuộn mượt khi bấm link anchor # */
+    scroll-behavior: smooth;
   }
-  
   body {
     @apply antialiased text-slate-800 bg-white;
   }
 }
 
 @layer utilities {
-  /* Animation Utility Classes */
   .animate-in {
     animation-duration: 300ms;
     animation-fill-mode: both;
   }
   
-  /* --- CUSTOM SCROLLBAR (Cho Chrome/Safari/Edge) --- */
+  /* --- CUSTOM SCROLLBAR --- */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
-  
   ::-webkit-scrollbar-track {
-    background: #f1f5f9; /* slate-100 */
+    background: #f1f5f9;
   }
-  
   ::-webkit-scrollbar-thumb {
-    background: #cbd5e1; /* slate-300 */
+    background: #cbd5e1;
     border-radius: 4px;
   }
-  
   ::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8; /* slate-400 */
+    background: #94a3b8;
   }
 
-  /* --- HIDE SCROLLBAR (Cho khu vực vuốt ngang Mobile) --- */
+  /* --- HIDE SCROLLBAR --- */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* --- MARQUEE ANIMATION (Chạy chữ) --- */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Dịch 50% vì ta nhân đôi nội dung */
+  }
+
+  .animate-marquee {
+    animation: marquee 60s linear infinite; /* Chạy chậm trong 60s cho dễ đọc */
+  }
+
+  /* Dừng khi hover hoặc click (active/focus) */
+  .pause-on-hover:hover,
+  .pause-on-hover:active,
+  .pause-on-hover:focus-within {
+    animation-play-state: paused;
   }
 }

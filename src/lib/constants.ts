@@ -11,18 +11,20 @@ export const SITE_CONFIG = {
 };
 
 export const NAV_LINKS = [
-  { label: "Học viện ", href: "#resources", highlight: true },
-  { label: "Giải pháp", href: "#methodology" ,highlight: true  },
-  { label: "Sản phẩm", href: "#products" , highlight: true },
+  { label: "Trang chủ", href: "/" , highlight: true },
+  { label: "Học viện ", href: "/academy", highlight: true },
+  { label: "Giải pháp", href: "/hybrid" ,highlight: true  },
   { label: "Về chúng tôi ", href: "#social-proof" , highlight: true },
+  { label: "Vocab Song ", href: "/vocab" , highlight: true },
+
 ];
 
 export const HERO_CONTENT = {
-  badge: "Tiên phong EdTech Hybrid",
+  badge: "Tiên phong Blended Learning",
   title_1: "Mẹ tự tin dạy con tiếng Anh thành công ",
   title_highlight: "ngay cả khi bắt đầu từ con số 0 ",
   desc: "Hệ sinh thái toàn diện giúp biến mỗi giờ học tại nhà thành khoảnh khắc gắn kết đầy niềm vui.",
-  bg_image: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1920&auto=format&fit=crop"
+  bg_image: "/images/1.png",
 };
 
 export const SOCIAL_PROOF_LOGOS = [
@@ -112,23 +114,27 @@ export const PRODUCTS = {
 
 export const FOUNDERS = [
   {
-    name: "Ms. Thu Hằng", role: "Co-Founder", title: "Người truyền lửa",
+    name: "Mrs. Mai Linh ", role: "Co-Founder", title: "Người truyền lửa",
     quote: "Giáo dục không chỉ là đổ đầy kiến thức, mà là thắp lên ngọn lửa.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop",
+    image: "/images/FD.jpg",
     color: "orange", icon: Heart
   },
   {
-    name: "TS. Nguyễn Văn A", role: "Co-Founder", title: "Kiến trúc sư chương trình",
+    name: "ThS. Hoàng Tăng Đức ", role: "Co-Founder", title: "Kiến trúc sư chương trình",
     quote: "Chúng tôi đưa những phương pháp sư phạm tiên tiến nhất thế giới vào Momtek.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop",
+    image: "/images/FD.jpg",
     color: "blue", icon: Award
   }
+  
 ];
 
 export const TESTIMONIALS = [
   { name: "Mẹ Lan Anh", loc: "Hà Nội", quote: "Gói Foundation sách rất đẹp. Nhưng mình vẫn quyết định nâng cấp lên Pathway để có cô giáo sửa lỗi. Rất đáng tiền!", avatar: "https://i.pravatar.cc/100?img=5" },
   { name: "Bố Hoàng Tùng", loc: "TP.HCM", quote: "Mình bắt đầu từ gói Free cho con nghe nhạc. Sau đó thấy con thích quá nên mua trọn bộ Momtek Language luôn.", avatar: "https://i.pravatar.cc/100?img=3" },
   { name: "Mẹ Thu Hà", loc: "Đà Nẵng", quote: "Cách Momtek phân chia lộ trình rất rõ ràng. Mình chọn gói Foundation vì muốn hạn chế con xem iPad.", avatar: "https://i.pravatar.cc/100?img=9" },
+  { name: "Mẹ Hoàng Dũng", loc: "Cần Thơ", quote: "Cách Momtek phân chia lộ trình rất rõ ràng. Mình chọn gói Foundation vì muốn hạn chế con xem iPad.", avatar: "https://i.pravatar.cc/100?img=9" },
+  { name: "Mẹ Minh Anh ", loc: "Hải Phòng ", quote: "Cách Momtek phân chia lộ trình rất rõ ràng. Mình chọn gói Foundation vì muốn hạn chế con xem iPad.", avatar: "https://i.pravatar.cc/100?img=9" },
+
 ];
 
 export const FOOTER_LINKS = {

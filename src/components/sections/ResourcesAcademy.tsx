@@ -19,11 +19,11 @@ const ResourcesAcademy = () => {
            Tư duy đúng , Kiến thức đúng  <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Sẵn sàng dạy con </span>
           </h2>
           <p className="text-lg text-slate-500">
-            Momtek được xây dựng bởi những tên tuổi hàng đầu trong nền giáo dục Việt Nam, mang đến giải pháp vừa khoa học, vừa giàu tình yêu thương.
+            Với kho tài nguyên đã dạng : từ cẩm nang chuyên sâu , bài hát vui nhộn đến các hoạt động sáng tạo , Momtek trang bị cho mẹ mọi thứ cần thiết để đồng hành cùng con trên hành trình chinh phục tiếng Anh.
           </p>
-          <a href="#" className="inline-flex items-center pt-5 gap-2 text-sm font-bold text-slate-400 hover:text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5">
+          <a href="/academy" className="inline-flex items-center pt-5 gap-2 text-sm font-bold text-slate-400 hover:text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5">
             <BookOpen className="w-4 h-4" />
-            Hãy xem câu chuyện của chúng tôi 
+            Vào Học viện Cha mẹ Momtek
           </a>
         </div>
 

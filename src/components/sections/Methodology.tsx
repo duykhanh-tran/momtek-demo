@@ -12,17 +12,17 @@ const Methodology = () => {
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <span className="text-blue-600 font-extrabold tracking-widest uppercase text-sm mb-3 block">Năng lực Cốt lõi</span>
           <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight">
-            Công thức 3 Trụ cột <br className="hidden md:block"/> tạo nên thành công của trẻ
+            Công thức 3 Trụ cột <br className="hidden md:block"/> tạo nên thành công 
           </h2>
           <p className="text-lg text-slate-500 mb-6">
-            Momtek sở hữu hệ sinh thái công cụ và con người toàn diện để giải quyết mọi rào cản học tập tại nhà.
+            Momtek sở hữu hệ sinh thái công cụ và con người toàn diện để giải quyết mọi rào cản học tiếng Anh tại nhà cho mẹ và con .
           </p>
-          <a href="#" className="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5">
+          <a href="/hybrid" className="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5">
             <BookOpen className="w-4 h-4" />
-            Tìm hiểu sâu về Triết lý Hybrid Learning
+            Tìm hiểu mô hình học tập đột phá Blended Learning 
           </a>
         </div>
-
+             
         <div className="grid md:grid-cols-3 gap-8 mb-10">
           {METHODOLOGY_PILLARS.map((pillar) => (
             <div key={pillar.id} className={`bg-${pillar.color}-50 rounded-3xl p-8 border border-${pillar.color}-100 shadow-sm hover:shadow-xl transition duration-300 group flex flex-col h-full relative overflow-hidden`}>

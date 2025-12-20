@@ -32,7 +32,6 @@ const Navbar = () => {
           isScrolled 
             ? 'bg-white/95 backdrop-blur-md border-b border-slate-100 py-3 shadow-sm' 
             : 'bg-white/50 backdrop-blur-sm py-4 border-b border-transparent' 
-            // Sửa lại mặc định có background nhẹ để dễ nhìn trên mọi nền
         }`}
       >
         <div className="container mx-auto px-5 flex justify-between items-center">
@@ -63,7 +62,7 @@ const Navbar = () => {
               Đăng nhập 
             </button>
 
-            <button className="bg-yellow-400 text-white px-8 py-2.5 rounded-full font-bold text-sm shadow-lg hover:bg-blue-700 hover:shadow-blue-500/30 transition transform hover:scale-105 active:scale-95">
+            <button className="bg-yellow-400 text-white px-8 py-2.5 rounded-full font-bold text-sm shadow-lg  hover:shadow-blue-500/30 transition transform hover:scale-105 active:scale-95">
               Đăng kí miễn phí 
             </button>
           </div>
@@ -106,11 +105,11 @@ const Navbar = () => {
             
             <div className="mt-8">
                <button className="w-full bg-blue-600 text-white px-5 py-4 rounded-xl font-bold shadow-lg text-lg mb-4">
-                Vào học ngay
+                Đăng nhập
               </button>
-              <p className="text-center text-xs text-slate-400">
-                &copy; 2025 Momtek Education
-              </p>
+              <button className="w-full bg-yellow-400 text-white px-5 py-4 rounded-xl font-bold shadow-lg text-lg">
+                Đăng kí miễn phí
+              </button>
             </div>
           </motion.div>
         )}

@@ -2,16 +2,23 @@
 
 import React from 'react';
 import { ModalProvider } from '@/context/ModalContext';
+import { UpsellProvider } from '@/context/UpsellContext'; // 1. Import UpsellProvider
 import VideoModal from '@/components/ui/VideoModal';
 import QuizModal from '@/components/quiz/QuizModal';
+import UpsellModal from '@/components/vocab/UpsellModal'; // 2. Import UpsellModal
 
 export default function ClientProviders({ children }: { children: React.ReactNode }) {
   return (
     <ModalProvider>
-      {children}
-      {/* Đặt Modal ở đây để chúng luôn nằm trên cùng và truy cập được context */}
-      <VideoModal />
-      <QuizModal />
+      {/* 3. Bọc UpsellProvider vào bên trong */}
+      <UpsellProvider>
+        {children}
+        
+        {/* Các Modal toàn cục */}
+        <VideoModal />
+        <QuizModal />
+        <UpsellModal />
+      </UpsellProvider>
     </ModalProvider>
   );
 }
