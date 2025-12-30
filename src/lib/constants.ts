@@ -10,13 +10,30 @@ export const SITE_CONFIG = {
   description: "Hệ sinh thái Tiếng Anh Hybrid dành cho cha mẹ và trẻ em.",
 };
 
+// Cập nhật cấu trúc NAV_LINKS có thêm children
 export const NAV_LINKS = [
-  { label: "Trang chủ", href: "/" , highlight: true },
-  { label: "Học viện ", href: "/academy", highlight: true },
-  { label: "Giải pháp", href: "/hybrid" ,highlight: true  },
-  { label: "Về chúng tôi ", href: "#social-proof" , highlight: true },
-  { label: "Vocab Song ", href: "/vocab" , highlight: true },
-
+  { label: "Hero", href: "/", highlight: false },
+  { label: "Học viện Cha mẹ", href: "/academy", highlight: false },
+  { 
+    label: "Năng lực cốt lõi", 
+    href: "/hybrid", 
+    highlight: false,
+    children: [
+      { label: "Vocal-song", href: "/vocab" },
+      { label: "Phonic AI", href: "/phonic-ai" },
+      { label: "Play-lab", href: "/play-lab" },
+      { label: "Sách Hybrid", href: "/hybrid-book" },
+    ]
+  },
+  { 
+    label: "Sản phẩm", 
+    href: "/products", 
+    highlight: false,
+    children: [
+      { label: "Language", href: "/language" },
+    ]
+  },
+  { label: "Đội ngũ Lãnh đạo", href: "/mentor", highlight: false },
 ];
 
 export const HERO_CONTENT = {
@@ -92,7 +109,7 @@ export const METHODOLOGY_PILLARS = [
       { text: "Gặp gỡ đội ngũ Mentor", icon: Smile },
       { text: "Quy trình Huấn luyện 1-1", icon: Video }
     ]
-  }
+  },
 ];
 
 export const PRODUCTS = {
@@ -125,7 +142,6 @@ export const FOUNDERS = [
     image: "/images/FD.jpg",
     color: "blue", icon: Award
   }
-  
 ];
 
 export const TESTIMONIALS = [
@@ -134,7 +150,6 @@ export const TESTIMONIALS = [
   { name: "Mẹ Thu Hà", loc: "Đà Nẵng", quote: "Cách Momtek phân chia lộ trình rất rõ ràng. Mình chọn gói Foundation vì muốn hạn chế con xem iPad.", avatar: "https://i.pravatar.cc/100?img=9" },
   { name: "Mẹ Hoàng Dũng", loc: "Cần Thơ", quote: "Cách Momtek phân chia lộ trình rất rõ ràng. Mình chọn gói Foundation vì muốn hạn chế con xem iPad.", avatar: "https://i.pravatar.cc/100?img=9" },
   { name: "Mẹ Minh Anh ", loc: "Hải Phòng ", quote: "Cách Momtek phân chia lộ trình rất rõ ràng. Mình chọn gói Foundation vì muốn hạn chế con xem iPad.", avatar: "https://i.pravatar.cc/100?img=9" },
-
 ];
 
 export const FOOTER_LINKS = {

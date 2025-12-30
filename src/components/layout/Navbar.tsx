@@ -2,13 +2,15 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight, ChevronDown } from 'lucide-react'; // Thêm ChevronDown
 import { NAV_LINKS } from '@/lib/constants';
-import { motion, AnimatePresence } from 'framer-motion'; // Dùng framer-motion cho mượt
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // State quản lý mở menu con trên mobile
+  const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -16,7 +18,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Khóa cuộn trang khi mở menu mobile
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -24,6 +25,15 @@ const Navbar = () => {
       document.body.style.overflow = 'unset';
     }
   }, [isMobileMenuOpen]);
+
+  // Hàm toggle submenu mobile
+  const toggleMobileSubmenu = (label: string) => {
+    if (mobileSubmenu === label) {
+      setMobileSubmenu(null);
+    } else {
+      setMobileSubmenu(label);
+    }
+  };
 
   return (
     <>
@@ -43,16 +53,37 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 font-bold text-slate-600 text-sm items-center">
             {NAV_LINKS.map((link, idx) => (
-              <Link 
-                key={idx} 
-                href={link.href} 
-                className={`transition hover:text-blue-600 relative group py-2 ${
-                  link.highlight ? 'text-blue-500 hover:text-orange-500' : ''
-                }`}
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
-              </Link>
+              <div key={idx} className="relative group">
+                {/* Parent Link */}
+                <Link 
+                  href={link.href} 
+                  className={`flex items-center gap-1 transition hover:text-blue-600 relative py-2 ${
+                    link.highlight ? 'text-blue-500 hover:text-orange-500' : ''
+                  }`}
+                >
+                  {link.label}
+                  {/* Mũi tên chỉ hiện nếu có children */}
+                  {link.children && <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300"/>}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+                </Link>
+
+                {/* Dropdown Desktop */}
+                {link.children && (
+                  <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 min-w-[200px] overflow-hidden">
+                      {link.children.map((child, childIdx) => (
+                        <Link 
+                          key={childIdx}
+                          href={child.href}
+                          className="block px-4 py-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 
@@ -85,25 +116,63 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-white pt-24 px-6 md:hidden flex flex-col h-screen"
+            className="fixed inset-0 z-40 bg-white pt-24 px-6 md:hidden flex flex-col h-screen overflow-y-auto"
           >
             <div className="flex flex-col gap-2">
               {NAV_LINKS.map((link, idx) => (
-                <Link 
-                  key={idx} 
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`font-bold text-lg p-4 rounded-xl flex items-center justify-between border-b border-slate-50 ${
-                    link.highlight ? 'text-orange-500 bg-orange-50' : 'text-slate-700 hover:bg-slate-50'
-                  }`}
-                >
-                  {link.label}
-                  <ChevronRight size={16} />
-                </Link>
+                <div key={idx} className="border-b border-slate-50 pb-2">
+                  <div 
+                    className={`font-bold text-lg p-3 rounded-xl flex items-center justify-between cursor-pointer ${
+                      link.highlight ? 'text-orange-500 bg-orange-50' : 'text-slate-700 hover:bg-slate-50'
+                    }`}
+                    onClick={() => link.children ? toggleMobileSubmenu(link.label) : setIsMobileMenuOpen(false)}
+                  >
+                    {/* Nếu có children thì bấm vào div sẽ toggle, nếu không có thì bấm vào Link */}
+                    {link.children ? (
+                       <span className="flex-1">{link.label}</span>
+                    ) : (
+                       <Link href={link.href} className="flex-1" onClick={() => setIsMobileMenuOpen(false)}>
+                         {link.label}
+                       </Link>
+                    )}
+                    
+                    {link.children ? (
+                      <ChevronDown 
+                        size={16} 
+                        className={`transition-transform duration-300 ${mobileSubmenu === link.label ? 'rotate-180' : ''}`}
+                      />
+                    ) : (
+                      <ChevronRight size={16} />
+                    )}
+                  </div>
+
+                  {/* Mobile Submenu Accordion */}
+                  <AnimatePresence>
+                    {link.children && mobileSubmenu === link.label && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden bg-slate-50 rounded-lg mx-2"
+                      >
+                         {link.children.map((child, childIdx) => (
+                           <Link
+                             key={childIdx}
+                             href={child.href}
+                             onClick={() => setIsMobileMenuOpen(false)}
+                             className="block p-3 pl-8 text-slate-600 font-medium hover:text-blue-600 border-l-2 border-transparent hover:border-blue-500 transition"
+                           >
+                             {child.label}
+                           </Link>
+                         ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               ))}
             </div>
             
-            <div className="mt-8">
+            <div className="mt-8 pb-10">
                <button className="w-full bg-blue-600 text-white px-5 py-4 rounded-xl font-bold shadow-lg text-lg mb-4">
                 Đăng nhập
               </button>
