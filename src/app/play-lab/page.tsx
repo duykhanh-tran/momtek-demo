@@ -4,6 +4,7 @@ import StarterPacks from '@/components/play-lab/StarterPacks';
 import ResourceLibrary from '@/components/play-lab/ResourceLibrary';
 import PlayLabValues from '@/components/play-lab/PlayLabValues';
 import ZaloSubscription from '@/components/play-lab/ZaloSubscription';
+import PhonicNextSteps from '@/components/phonic-ai/PhonicNextSteps';
 import FadeIn from '@/components/ui/FadeIn';
 
 export default function PlayLabPage() {
@@ -28,6 +29,9 @@ export default function PlayLabPage() {
         <ZaloSubscription />
       </FadeIn>
 
+      <FadeIn>
+        <PhonicNextSteps />
+      </FadeIn>
     </div>
   );
 }

@@ -61,7 +61,9 @@ export const PROCESS_STEPS: ProcessStep[] = [
     icon: 'brain',
     title: '1. HEAD (Cái đầu)',
     subtitle: 'Giỏi chuyên môn',
-    items: ['Chứng chỉ TESOL/CELTA quốc tế.', 'IELTS 7.5+ hoặc tốt nghiệp Sư phạm.'],
+    items: ['Chứng chỉ TESOL/CELTA quốc tế.', 
+      'IELTS 7.5+ hoặc tốt nghiệp Sư phạm.'
+    ],
     colorTheme: 'blue'
   },
   {
@@ -69,7 +71,9 @@ export const PROCESS_STEPS: ProcessStep[] = [
     icon: 'heart',
     title: '2. HEART (Trái tim)',
     subtitle: 'Giàu yêu thương',
-    items: ['Vượt qua bài test EQ & Tâm lý trẻ.', 'Ưu tiên những người đã làm mẹ.'],
+    items: [
+      'Vượt qua bài test EQ & Tâm lý trẻ.',
+       'Ưu tiên những người đã làm mẹ.'],
     colorTheme: 'red'
   },
   {
@@ -77,21 +81,23 @@ export const PROCESS_STEPS: ProcessStep[] = [
     icon: 'hand',
     title: '3. HAND (Bàn tay)',
     subtitle: 'Sự tận tụy',
-    items: ['Sẵn sàng hỗ trợ mẹ 24/7.', 'Cầm tay chỉ việc, sửa từng lỗi nhỏ.'],
+    items: [
+      'Sẵn sàng hỗ trợ mẹ 24/7.', 
+      'Cầm tay chỉ việc, sửa từng lỗi nhỏ.'],
     colorTheme: 'orange'
   }
 ];
 
 export const ADVISORS: Advisor[] = [
   {
-    name: 'Tiến sĩ Nguyễn Thanh Vân',
-    role: 'Cố vấn Giáo trình',
+    name: 'Teacher Mai Linh',
+    role: 'MOMTEK`S Founder',
     quote: '"Giáo dục sớm không phải là dạy kiến thức sớm, mà là đánh thức tiềm năng đúng thời điểm."',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop'
   },
   {
-    name: 'Thạc sĩ David Wilson',
-    role: 'Chuyên gia Ngôn ngữ học',
+    name: 'MA.Hoàng Tăng Đức',
+    role: 'MOMTEK`S Founder',
     quote: '"Phương pháp Hybrid của Momtek là bước tiến thông minh để đưa tiếng Anh chuẩn vào từng gia đình."',
     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop'
   }

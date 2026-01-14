@@ -13,7 +13,7 @@ export default function FoundingStory() {
         <div className="container mx-auto px-6">
             <div className="text-center mb-16">
                 <span className="text-slate-400 font-bold tracking-widest uppercase text-sm">Câu chuyện khởi tạo</span>
-                <h2 className="text-3xl font-black text-slate-900 mt-2">Tại sao lại là Hybrid?</h2>
+                <h2 className="text-3xl font-black text-slate-900 mt-2">Tại sao lại là Blend?</h2>
                 <p className="text-slate-500 mt-2 max-w-2xl mx-auto">
                     Sự kết hợp giữa tư duy Giáo dục truyền thống và Công nghệ hiện đại, đúc kết từ tâm huyết của hai nhà sáng lập.
                 </p>

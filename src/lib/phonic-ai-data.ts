@@ -28,4 +28,9 @@ export const IPA_WORDS = [
   { word: "HAT", phonetic: "/hæt/", mean: "Cái mũ", img: "https://cdn-icons-png.flaticon.com/512/3063/3063822.png" },
   { word: "MAP", phonetic: "/mæp/", mean: "Bản đồ", img: "https://cdn-icons-png.flaticon.com/512/235/235183.png" },
   { word: "TAP", phonetic: "/tæp/", mean: "Vòi nước", img: "https://cdn-icons-png.flaticon.com/512/2855/2855589.png" },
+  { word: "CAT", phonetic: "/kæt/", mean: "Con mèo", img: "https://cdn-icons-png.flaticon.com/512/616/616408.png" },
+  { word: "BAT", phonetic: "/bæt/", mean: "Con dơi", img: "https://cdn-icons-png.flaticon.com/512/1998/1998610.png" },
+  { word: "HAT", phonetic: "/hæt/", mean: "Cái mũ", img: "https://cdn-icons-png.flaticon.com/512/3063/3063822.png" },
+  { word: "MAP", phonetic: "/mæp/", mean: "Bản đồ", img: "https://cdn-icons-png.flaticon.com/512/235/235183.png" },
+  { word: "TAP", phonetic: "/tæp/", mean: "Vòi nước", img: "https://cdn-icons-png.flaticon.com/512/2855/2855589.png" },
 ];

@@ -5,9 +5,12 @@ const PainPoints = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-slate-800 mb-10">
-          Hành trình dạy con không hề dễ dàng...
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-black text-center text-slate-900 mb-6 leading-tight">
+            Dạy con tiếng Anh, Hành trình muôn vàn khó khăn!
+          </h2>
+         <p className="text-lg text-slate-500 text-center mb-8 max-w-3xl mx-auto">
+          Nỗi vất vả không chỉ riêng mình mẹ ,rất nhiều mẹ khác cũng như vậy. 
+        </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {PAIN_POINTS.map((point, index) => (
             <div 

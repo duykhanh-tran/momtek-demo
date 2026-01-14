@@ -29,7 +29,7 @@ const ProducerNote = () => {
               </h3>
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <div>
-                  <p className="font-bold text-white text-sm">Ms. Thu Hằng</p>
+                  <p className="font-bold text-white text-sm">Ms. Mai Linh </p>
                   <p className="text-[10px] text-slate-400 uppercase">Founder Momtek</p>
                 </div>
                 <div className="w-px h-8 bg-slate-700 mx-1"></div>
@@ -42,11 +42,11 @@ const ProducerNote = () => {
         </div>
 
         {/* Badges */}
-        <div className="flex justify-center gap-4 md:gap-8 mt-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+        {/* <div className="flex justify-center gap-4 md:gap-8 mt-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
           <div className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-slate-400" /><span className="text-[10px] md:text-xs font-bold text-slate-500">Kid-Safe Content</span></div>
           <div className="flex items-center gap-1.5"><BrainCircuit className="w-4 h-4 text-slate-400" /><span className="text-[10px] md:text-xs font-bold text-slate-500">Earworm Tech</span></div>
           <div className="flex items-center gap-1.5"><Award className="w-4 h-4 text-slate-400" /><span className="text-[10px] md:text-xs font-bold text-slate-500">Teacher Approved</span></div>
-        </div>
+        </div> */}
 
       </div>
     </section>

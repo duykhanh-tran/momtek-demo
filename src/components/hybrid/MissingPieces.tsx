@@ -5,8 +5,8 @@ const MissingPieces = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6 text-center mb-16">
-        <h2 className="text-3xl font-black text-slate-900">Tại sao các mô hình cũ đang dần lỗi thời?</h2>
-        <p className="text-slate-500 mt-2">Để giúp con học tiếng Anh, trước đây mẹ chỉ có 3 lựa chọn, và cả 3 đều chưa đạt hiệu quả cao.</p>
+        <h2 className="text-3xl font-black text-slate-900">Các mô hình cũ đang dần lỗi thời?</h2>
+        <p className="text-slate-500 mt-2">Để giúp con học tiếng Anh, trước đây mẹ chỉ có 3 lựa chọn, và cả 3 đều không đạt hiệu quả cao.</p>
       </div>
       
       <div className="container mx-auto px-6 grid md:grid-cols-3 gap-8">

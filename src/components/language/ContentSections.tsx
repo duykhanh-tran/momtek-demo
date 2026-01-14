@@ -41,14 +41,14 @@ export default function HeroSection() {
             </div>
             
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-black text-white mb-4 md:mb-6 leading-tight">
-              Mẹ cùng con chinh phục chuẩn Cambridge <br className="hidden md:block"/>
+              Mẹ cùng con chinh phục chuẩn Cambridge <br />
               <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent"> 
-                Pre-Starters ngay tại nhà. 
+              Pre-Starters ngay tại nhà. 
               </span> 
             </h1>
 
-            <p className="text-sm md:text-lg text-slate-400 mb-6 md:mb-8 leading-relaxed border-l-0 md:border-l-4 border-blue-500 pl-0 md:pl-4 max-w-xl mx-auto md:mx-0">
-              Biến Mẹ thành <strong>"Đồng đội"</strong> yêu thích. Con chủ động học qua App, Sách và được <strong>Giáo viên hỗ trợ 1-1</strong>.
+            <p className="text-sm md:text-lg text-slate-400 mb-6 md:mb-8 leading-relaxed border-l-0  pl-0  max-w-xl mx-auto md:mx-0">
+              Giải pháp duy nhất biến Mẹ thành <strong>"Đồng đội"</strong> yêu thích. Con chủ động rủ mẹ thi đấu qua App, cùng làm bài tập trên Sách và được <strong>Giáo viên hỗ trợ 1-1</strong> hàng tuần .
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-3 md:gap-4 mb-8">
@@ -56,7 +56,7 @@ export default function HeroSection() {
                 <div className="w-6 h-6 md:w-8 md:h-8 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-sm group-hover:scale-110 transition">
                   <Play className="w-3 h-3 md:w-4 md:h-4 fill-current" />
                 </div>
-                <span className="font-bold text-slate-200 group-hover:text-white text-sm md:text-base">Xem video học tại nhà</span>
+                <span className="font-bold text-slate-200 group-hover:text-white text-sm md:text-base">Xem Video buổi học Mẹ & Con ở nhà </span>
               </Link>
             </div>
 

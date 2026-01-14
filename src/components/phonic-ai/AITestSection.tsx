@@ -49,13 +49,13 @@ const AITestSection = () => {
   };
 
   return (
-    <section className="py-12 bg-slate-900 border-y border-slate-800" id="ai-test-section">
+    <section className="py-12 bg-white border-y border-slate-800" id="ai-test-section">
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
         <div className="text-center mb-8">
-          <span className="inline-block py-1 px-3 rounded bg-purple-900/50 text-purple-300 text-xs font-bold uppercase tracking-wider mb-3 border border-purple-500/30">
+          <span className="inline-block py-1 px-3 rounded bg-purple-900 text-purple-300 text-xs font-bold uppercase tracking-wider mb-3 border border-purple-500/30">
             AI Checkup
           </span>
-          <h2 className="text-3xl font-black text-white mb-2 font-tech">Kiểm tra trình độ phát âm</h2>
+          <h2 className="text-3xl font-black text-black mb-2 font-tech">Kiểm tra trình độ phát âm</h2>
           <p className="text-slate-400 text-sm">Bài test nhanh. Cần đăng nhập để AI lưu hồ sơ và theo dõi tiến bộ.</p>
         </div>
 

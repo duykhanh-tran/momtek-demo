@@ -3,7 +3,7 @@ import { Brain, Heart, Zap, Music, Box, Mic, Download, Smartphone, Video, Messag
 export const ACADEMY_HERO = {
   label: "Thư ngỏ từ Founder",
   title_1: "Giáo dục không phải là đổ đầy một chiếc bình, ",
-  title_2: "mà là thắp lên một ngọn lửa ",
+  title_2: "mà là  ",
   title_highlight: "thắp lên một ngọn lửa ",
   desc: "Chào mừng ba mẹ đến với Học viện Momtek. Tại đây,chúng tôi kết hợp công nghệ AI (High Tech) và sự kết nối cảm xúc (High Touch) để giúp ba mẹ trở thành người thầy vĩ đại nhất của con mình.",
   author: "Teacher.Mai Linh ",

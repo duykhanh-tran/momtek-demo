@@ -75,8 +75,8 @@ export const COMPARISON_DATA: ComparisonItem[] = [
     isHighlight: true,
     features: [
       { text: 'Đa phương tiện: Video, Audio, Game.', type: 'positive' },
-      { text: 'Tiện lợi: Dùng điện thoại của mẹ.', type: 'positive' },
-      { text: 'Thông minh: Có bài tập LMS & AI.', type: 'positive' },
+      { text: 'Tiện lợi: Dùng điện thoại của mẹ.(Không mua thêm thiết bị )', type: 'positive' },
+      { text: 'Thông minh: Có bài tập LMS & AI chấm điểm .', type: 'positive' },
     ]
   }
 ];

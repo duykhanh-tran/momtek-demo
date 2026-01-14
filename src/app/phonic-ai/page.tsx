@@ -4,6 +4,7 @@ import AITestSection from '@/components/phonic-ai/AITestSection';
 import ZaloChallenge from '@/components/phonic-ai/ZaloChallenge';
 import IPATraining from '@/components/phonic-ai/IPATraining';
 import PhonicNextSteps from '@/components/phonic-ai/PhonicNextSteps';
+import PronunciationScorer from '@/components/features/PronunciationScorer';
 import FadeIn from '@/components/ui/FadeIn';
 
 export default function PhonicPage() {
@@ -12,20 +13,14 @@ export default function PhonicPage() {
       <PhonicHero />
       
       <FadeIn>
-        <AITestSection />
+        <PronunciationScorer />
       </FadeIn>
-
-      <FadeIn>
         <ZaloChallenge />
-      </FadeIn>
-
-      <FadeIn>
+      
         <IPATraining />
-      </FadeIn>
-
-      <FadeIn>
+      
         <PhonicNextSteps />
-      </FadeIn>
+      
     </div>
   );
 }

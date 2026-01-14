@@ -16,12 +16,15 @@ const ResourcesAcademy = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-blue-600 font-extrabold tracking-widest uppercase text-sm mb-3 block">Học viên Cha mẹ </span>
           <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight">
-           Tư duy đúng , Kiến thức đúng  <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Sẵn sàng dạy con </span>
+           Tư duy & Kiến thức để dạy con
           </h2>
           <p className="text-lg text-slate-500">
-            Với kho tài nguyên đã dạng : từ cẩm nang chuyên sâu , bài hát vui nhộn đến các hoạt động sáng tạo , Momtek trang bị cho mẹ mọi thứ cần thiết để đồng hành cùng con trên hành trình chinh phục tiếng Anh.
+            Kho tài nguyên đã dạng : từ cẩm nang chuyên sâu ,bài hát vui nhộn đến các hoạt dộng sáng tạo.
           </p>
-          <a href="/academy" className="inline-flex items-center pt-5 gap-2 text-sm font-bold text-slate-400 hover:text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5">
+          <p className="text-lg text-slate-500">
+            Mọi thứ mẹ cần để tự tin bắt đầu hành trình cùng con. 
+          </p>
+          <a href="/academy" className="inline-flex items-center pt-5 gap-2 text-sm font-bold  text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5">
             <BookOpen className="w-4 h-4" />
             Vào Học viện Cha mẹ Momtek
           </a>

@@ -5,10 +5,10 @@ import { TRAINING_TOPICS, IPA_WORDS } from '@/lib/phonic-ai-data';
 
 const IPATraining = () => {
   return (
-    <section className="py-16 bg-slate-950">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Luyện tập nhanh (IPA Training)</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-black mb-2">Luyện tập nhanh (IPA Training)</h2>
           <p className="text-slate-400 text-sm">Cải thiện từng âm vị thông qua các bộ từ vựng chủ đề.</p>
         </div>
 
@@ -39,8 +39,6 @@ const IPATraining = () => {
             </div>
           ))}
         </div>
-        
-        <p className="text-center text-xs text-slate-600 mt-4 italic">*Lưu ý: Tính năng ghi âm hoạt động tốt nhất trên App Momtek (iOS/Android).</p>
       </div>
     </section>
   );

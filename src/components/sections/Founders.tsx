@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Quote } from 'lucide-react';
 import { FOUNDERS } from '@/lib/constants';
+import {BookOpen } from 'lucide-react';
 
 const Founders = () => {
   return (
@@ -16,11 +17,17 @@ const Founders = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-blue-600 font-extrabold tracking-widest uppercase text-sm mb-3 block">Đội ngũ Lãnh đạo</span>
           <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight">
-            Sự kết hợp hoàn hảo giữa <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Tâm huyết & Chuyên môn</span>
+            Sự kết hợp hoàn hảo giữa <br/> Tâm huyết & Chuyên môn
           </h2>
-          <p className="text-lg text-slate-500">
-            Momtek được xây dựng bởi những tên tuổi hàng đầu trong nền giáo dục Việt Nam, mang đến giải pháp vừa khoa học, vừa giàu tình yêu thương.
+          <p className="text-lg text-slate-500 mb-6">
+            Momtek được xây dựng bởi những tên tuổi hàng đầu ngành đào tạo tiếng Anh Việt Nam, 
+          <br />
+            mang đến giải pháp vừa khoa học, vừa giàu tình yêu thương.
           </p>
+          <a href="/hybrid" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5">
+            <BookOpen className="w-4 h-4" />
+            Hãy xem câu chuyện của chúng tôi 
+          </a>
         </div>
 
         {/* FIX LAYOUT:
@@ -61,7 +68,10 @@ const Founders = () => {
                     <p className="text-slate-600 italic">"{founder.quote}"</p>
                   </div>
                   <ul className="space-y-2 mt-auto text-sm text-slate-500">
-                    <li className="flex gap-2 items-start"><founder.icon className={`w-4 h-4 text-${founder.color === 'orange' ? 'orange-500' : 'blue-600'} mt-0.5 shrink-0`} /> Kinh nghiệm dày dặn</li>
+                    <li className="flex gap-2 items-start"><founder.icon1 className={`w-4 h-4 text-${founder.color === 'orange' ? 'orange-500' : 'blue-600'} mt-0.5 shrink-0`} /> 15 năm kinh nghiệm giảng dạy thực tế .</li>
+                  </ul>
+                  <ul className="space-y-2 mt-auto text-sm text-slate-500">
+                    <li className="flex gap-2 items-start"><founder.icon2 className={`w-4 h-4 text-${founder.color === 'orange' ? 'orange-500' : 'blue-600'} mt-0.5 shrink-0`} /> Admin cộng đồng 500K phụ huynh.</li>
                   </ul>
                 </div>
               </div>
@@ -72,7 +82,7 @@ const Founders = () => {
         <div className="mt-8 md:mt-16 text-center max-w-2xl mx-auto bg-slate-50 p-6 rounded-2xl border border-slate-200">
           <Quote className="w-8 h-8 text-slate-300 mx-auto mb-4 fill-current" />
           <p className="text-lg font-bold text-slate-800">
-            "Sứ mệnh của chúng tôi là biến tiếng Anh từ 'nỗi sợ' thành 'niềm vui' trong mọi gia đình Việt."
+            "Momtek trao quyền để mỗi người mẹ đều có thể trở thành cô giáo tiếng Anh đầu tiên và tốt nhất của con ."
           </p>
         </div>
       </div>

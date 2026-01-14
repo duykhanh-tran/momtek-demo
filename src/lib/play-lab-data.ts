@@ -2,9 +2,9 @@ import { Scissors, Search, ArrowRight, Library, Download, Eye, Package, BrainCir
 
 export const PLAY_HERO = {
   label: "Triết lý MOMTEK",
-  title_1: " Con không cần vào bàn để học,Momtek  ",
+  title_1: " Nơi học không nhất định là Bàn học, Momtek   ",
   title_2: "biến phòng khách thành  ",
-  title_highlight: "sân chơi ngôn ngữ  ",
+  title_highlight: "sân chơi ngôn ngữ.  ",
   desc: "Tại sao phải ép con ngồi cào bàn học ? Tại Momtel Play Lab, chúng tôi tin rằng đôi tay lấm lem và những tiếng cười hạnh phúc mới là cách nhanh nhất để trẻ 'ngấm' tiếng Anh ",
   author: "Teacher.Mai Linh ",
   role: "Founder Momtek",

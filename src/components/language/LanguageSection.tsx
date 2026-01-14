@@ -43,7 +43,7 @@ export const SolutionSection = () => (
                 <div className="w-full md:w-1/2 order-2 md:order-1">
                     <span className="text-orange-500 font-bold uppercase tracking-widest text-sm">Giải pháp đột phá</span>
                     <h2 className="text-3xl md:text-5xl font-black text-slate-900 mt-2 mb-6 ">
-                        Lần đầu tiên, <br/>con <span className="text-orange-500">chủ động rủ mẹ học!</span>
+                        Lần đầu tiên, con <span className="text-orange-500">chủ động rủ mẹ học!</span>
                     </h2>
                     <p className="text-lg text-slate-500 mb-6">
                         Tính năng <strong>"Thách đấu cùng Mẹ"</strong> biến giờ học thành 15 phút cười đùa chất lượng (Quality Time).
@@ -118,20 +118,20 @@ export const UnboxingSection = () => (
             <div className="flex flex-col md:flex-row items-center gap-12">
                 <div className="w-full md:w-1/2">
                     <div className="inline-flex items-center gap-2 border border-yellow-500/50 text-yellow-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-                        <Package className="w-4 h-4"/> Premium Unboxing
+                        <Package className="w-4 h-4"/> LEVEL PACKAGE
                     </div>
                     <h2 className="text-3xl md:text-5xl font-black mb-6  leading-tight">
-                        Món quà tri thức khổng lồ <br/>
-                        <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">gửi về tận cửa nhà bạn.</span>
+                        Bộ học liệu  <br/>
+                        <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">cho mỗi một level.</span>
                     </h2>
                     <p className="text-slate-400 text-lg mb-8 leading-relaxed">
                         Đây không phải sách bài tập khô khan. Với chất liệu giấy chống lóa bảo vệ mắt, hình vẽ tay 100%, đây là thế giới để con khám phá.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
                         {[
-                        {num: '05', label: 'Cuốn Workbook'},
+                        {num: '01', label: 'Hộp cứng sang trọng'},
                         {num: '05', label: 'Bộ Flashcards'},
-                        {num: '01', label: 'Hộp cứng Sang trọng'},
+                        {num: '05', label: 'Cuốn Workbook'},
                         {num: '∞', label: 'Tài khoản App Trọn đời'}
                         ].map((item, i) => (
                         <div key={i} className="bg-slate-800 p-4 rounded-xl border border-slate-700">
@@ -219,6 +219,9 @@ export const QualityControlSection = () => (
                     <h2 className="text-3xl md:text-4xl font-black text-slate-900 mt-2 mb-6 ">
                         Không để con hổng kiến thức.
                     </h2>
+                    <p className="text-lg text-slate-500  mt-2 mb-2">
+                    Khác biệt hoàn toàn với App tự học.Tại Momtek, chúng tôi cam kết không để mẹ đơn độc .
+                </p>
                     <ul className="space-y-3 text-slate-600">
                         <li className="flex gap-3"><Check className="text-green-500 w-5 h-5 shrink-0" /> <span>Test Speaking 1-1 với giáo viên sau mỗi Unit (2 tuần).</span></li>
                         <li className="flex gap-3"><Check className="text-green-500 w-5 h-5 shrink-0" /> <span>Quyền lợi đặt lịch tư vấn riêng cho mẹ.</span></li>
@@ -239,14 +242,18 @@ export const PricingSection = () => (
                 </h2>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-end">
+            {/* Thay đổi: Loại bỏ items-end để các cột tự động stretch bằng nhau */}
+            <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {PRICING_PLANS.map((plan, idx) => {
                     const isDark = plan.theme === 'dark';
-                    const orderClass = plan.isBestValue ? 'lg:order-2 order-1 transform lg:-translate-y-4' : (plan.price.includes('900') ? 'lg:order-1 order-2 opacity-75 hover:opacity-100' : 'lg:order-3 order-3');
+                    // Logic sắp xếp thứ tự hiển thị
+                    const orderClass = plan.isBestValue 
+                        ? 'lg:order-2 order-1 transform lg:-translate-y-4' 
+                        : (plan.price.includes('900') || idx === 0 ? 'lg:order-1 order-2 opacity-90 hover:opacity-100' : 'lg:order-3 order-3 opacity-90 hover:opacity-100');
                     
                     return (
                         <div key={idx} className={`
-                            relative p-8 rounded-2xl transition shadow-sm
+                            relative p-8 rounded-2xl transition shadow-sm h-full flex flex-col
                             ${isDark ? 'bg-slate-900 border-4 border-orange-500 shadow-2xl text-white' : 'bg-white border border-slate-200 text-slate-900'}
                             ${plan.isPopular ? 'border-2 border-blue-100 shadow-lg' : ''}
                             ${orderClass}
@@ -267,6 +274,7 @@ export const PricingSection = () => (
                                 {plan.subText}
                             </div>
                             
+                            {/* Nút bấm */}
                             <button className={`
                                 block w-full py-3 rounded-xl font-bold text-center transition
                                 ${plan.isBestValue 

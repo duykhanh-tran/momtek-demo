@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 const PhonicNextSteps = () => {
   return (
-    <section className="py-12 bg-slate-900 border-t border-slate-800">
+    <section className="py-12 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-8">
-          <h3 className="text-xl font-bold text-white mb-2">Bạn muốn làm gì tiếp theo?</h3>
+          <h3 className="text-xl font-bold text-black mb-2">Bạn muốn làm gì tiếp theo?</h3>
           <p className="text-slate-500 text-sm">Khám phá các phương pháp học tập khác tại Momtek.</p>
         </div>
 

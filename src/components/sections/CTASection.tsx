@@ -25,15 +25,6 @@ const CTASection = () => {
             <Zap className="w-6 h-6 fill-current" />
             Làm Quiz & Nhận Lộ trình
           </button>
-
-          {/* Nút mở Video Youtube (Mới thêm) */}
-          <button 
-            onClick={() => openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')}
-            className="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-10 py-5 rounded-full font-bold text-xl backdrop-blur-sm transition transform hover:scale-105 flex items-center justify-center gap-3"
-          >
-            <Play className="w-6 h-6 fill-current" />
-            Xem Video
-          </button>
         </div>
         <p className="mt-6 text-sm text-blue-300 opacity-80">
           Miễn phí 100% • Không cần thẻ tín dụng

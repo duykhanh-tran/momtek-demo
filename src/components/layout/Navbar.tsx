@@ -2,14 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronRight, ChevronDown } from 'lucide-react'; // Thêm ChevronDown
+import { Menu, X, ChevronRight, ChevronDown } from 'lucide-react';
 import { NAV_LINKS } from '@/lib/constants';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // State quản lý mở menu con trên mobile
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
 
   useEffect(() => {
@@ -26,7 +25,10 @@ const Navbar = () => {
     }
   }, [isMobileMenuOpen]);
 
-  // Hàm toggle submenu mobile
+  useEffect(() => {
+    if (!isMobileMenuOpen) setMobileSubmenu(null);
+  }, [isMobileMenuOpen]);
+
   const toggleMobileSubmenu = (label: string) => {
     if (mobileSubmenu === label) {
       setMobileSubmenu(null);
@@ -41,7 +43,7 @@ const Navbar = () => {
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled 
             ? 'bg-white/95 backdrop-blur-md border-b border-slate-100 py-3 shadow-sm' 
-            : 'bg-white/50 backdrop-blur-sm py-4 border-b border-transparent' 
+            : 'bg-white/95 backdrop-blur-md border-b border-slate-100 py-3 shadow-sm'
         }`}
       >
         <div className="container mx-auto px-5 flex justify-between items-center">
@@ -54,7 +56,7 @@ const Navbar = () => {
           <div className="hidden md:flex gap-8 font-bold text-slate-600 text-sm items-center">
             {NAV_LINKS.map((link, idx) => (
               <div key={idx} className="relative group">
-                {/* Parent Link */}
+                {/* SỬA ĐỔI: Luôn dùng link.href thật và xóa e.preventDefault() để cho phép click chuyển trang */}
                 <Link 
                   href={link.href} 
                   className={`flex items-center gap-1 transition hover:text-blue-600 relative py-2 ${
@@ -62,12 +64,11 @@ const Navbar = () => {
                   }`}
                 >
                   {link.label}
-                  {/* Mũi tên chỉ hiện nếu có children */}
                   {link.children && <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300"/>}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
                 </Link>
 
-                {/* Dropdown Desktop */}
+                {/* Desktop Dropdown */}
                 {link.children && (
                   <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                     <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 min-w-[200px] overflow-hidden">
@@ -108,7 +109,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay with AnimatePresence */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -122,38 +123,47 @@ const Navbar = () => {
               {NAV_LINKS.map((link, idx) => (
                 <div key={idx} className="border-b border-slate-50 pb-2">
                   <div 
-                    className={`font-bold text-lg p-3 rounded-xl flex items-center justify-between cursor-pointer ${
-                      link.highlight ? 'text-orange-500 bg-orange-50' : 'text-slate-700 hover:bg-slate-50'
+                    className={`font-bold text-lg p-3 rounded-xl flex items-center justify-between ${
+                        link.highlight ? 'text-orange-500 bg-orange-50' : 'text-slate-700 hover:bg-slate-50'
                     }`}
-                    onClick={() => link.children ? toggleMobileSubmenu(link.label) : setIsMobileMenuOpen(false)}
                   >
-                    {/* Nếu có children thì bấm vào div sẽ toggle, nếu không có thì bấm vào Link */}
+                    {/* SỬA ĐỔI MOBILE: Tách tên Link và nút mũi tên */}
+                    <Link 
+                      href={link.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex-1"
+                    >
+                      {link.label}
+                    </Link>
+
+                    {/* Nếu có con thì hiển thị nút mũi tên riêng biệt để toggle menu */}
                     {link.children ? (
-                       <span className="flex-1">{link.label}</span>
+                        <div 
+                            className="p-2 -mr-2 cursor-pointer hover:bg-slate-200 rounded-full transition"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                toggleMobileSubmenu(link.label);
+                            }}
+                        >
+                             <ChevronDown 
+                                size={20} 
+                                className={`transition-transform duration-300 ${mobileSubmenu === link.label ? 'rotate-180' : ''}`}
+                            />
+                        </div>
                     ) : (
-                       <Link href={link.href} className="flex-1" onClick={() => setIsMobileMenuOpen(false)}>
-                         {link.label}
-                       </Link>
-                    )}
-                    
-                    {link.children ? (
-                      <ChevronDown 
-                        size={16} 
-                        className={`transition-transform duration-300 ${mobileSubmenu === link.label ? 'rotate-180' : ''}`}
-                      />
-                    ) : (
-                      <ChevronRight size={16} />
+                        <ChevronRight size={16} className="text-slate-400" />
                     )}
                   </div>
 
-                  {/* Mobile Submenu Accordion */}
+                  {/* Phần hiển thị Menu con */}
                   <AnimatePresence>
                     {link.children && mobileSubmenu === link.label && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden bg-slate-50 rounded-lg mx-2"
+                        className="overflow-hidden bg-slate-50 rounded-lg mx-2 mt-1"
                       >
                          {link.children.map((child, childIdx) => (
                            <Link

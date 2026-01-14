@@ -1,3 +1,4 @@
+import { strong } from 'framer-motion/m';
 import { 
   MicOff, Tv, HelpCircle, 
   Smartphone, BookOpen, UserCheck, 
@@ -74,10 +75,10 @@ export const CURRICULUM = [
 export const PRICING_PLANS = [
   {
     id: 'trial',
-    name: "Trải nghiệm",
+    name: "1 LEVELS",
     price: "900.000đ",
     originalPrice: null,
-    subText: "/ 1 Level (2.5 tháng)",
+    subText: "/ 1 Level (bao gồm 5 units)",
     features: ["05 Sách Workbook", "05 Bộ Flashcards"],
     isBestValue: false,
     cta: "Mua lẻ tại Shop",
@@ -85,14 +86,12 @@ export const PRICING_PLANS = [
   },
   {
     id: 'full',
-    name: "Gói Toàn diện (6 Levels)",
-    price: "4.590.000đ",
-    originalPrice: "5.400k",
-    subText: "Tiết kiệm 15% (810.000đ)",
+    name: "COMBO 3 LEVELS",
+    price: "2.430.000đ",
+    originalPrice: "2.700.000đ",
+    subText: "Tiết kiệm 10% (270.000đ)",
     features: [
       "Tặng bộ Phonic/Story Blend (300k)",
-      "Giảm 50% Khóa Online Giao tiếp (Tiết kiệm 1.8tr)",
-      "Ưu tiên xếp lịch Mentor VIP"
     ],
     isBestValue: true,
     cta: "Đăng ký Ngay",
@@ -100,14 +99,18 @@ export const PRICING_PLANS = [
   },
   {
     id: 'combo',
-    name: "Gói Tăng tốc (3 Levels)",
-    price: "2.430.000đ",
-    originalPrice: "2.700k",
-    subText: "Tiết kiệm 10% (270.000đ)",
-    features: ["Tặng bộ Phonic/Story Blend (300k)"],
+    name: "COMBO 6 LEVELS",
+    price: "4.590.000đ",
+    originalPrice: "5.400.000đ",
+    subText: "Tiết kiệm 15% (810.000đ)",
+    features: [
+      "Tặng bộ Phonic/Story Blend (300k)",
+      "<strong>Giảm 50%%</strong> Khóa Online Giao tiếp ( Tiết kiệm 1.8tr )",
+      "Ưu tiên xếp lịch Mentor VIP"
+    ],
     isBestValue: false,
     isPopular: true,
-    cta: "Mua Combo 3 Level",
+    cta: "Mua Combo 6 Level",
     theme: "light"
   }
 ];

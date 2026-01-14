@@ -11,14 +11,13 @@ export default function VocabPage() {
     <div className="bg-white min-h-screen">
       <VocabHero />
       <FilterBar />
-      
       <FadeIn>
         <SongGrid />
       </FadeIn>
-      <VocalNextSteps />
       <FadeIn>
         <MP3DownloadCTA />
       </FadeIn>
+      <VocalNextSteps />
     </div>
   );
 }

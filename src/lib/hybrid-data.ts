@@ -5,9 +5,9 @@ import {
 
 export const HYBRID_HERO = {
   label: "Câu chuyện sáng lập",
-  title_1: "Tại sao phải chọn giữa ",
-  title_2: "khi con bạn cần cả hai?",
-  title_highlight: "Công nghệ và Cảm xúc ",
+  title_1: "Tại sao phải chọn Online hay Offline,Công nghệ ",
+  title_2: "hay Truyền thống?",
+  title_highlight: " Con cần cả hai.",
   desc: "Mô hình giáo dục tiên phong, kết hợp sức mạnh AI, học liệu truyền thống và sự gắn kết gia đình, giúp mẹ không cần giỏi tiếng Anh vẫn là người thầy tốt nhất của con.",
   author: "Teacher.Mai Linh ",
   role: "Founder Momtek",
@@ -117,7 +117,7 @@ export const NEXT_STEPS = [
 
 export const FOUNDER_STORY = {
   quote: '"Tôi cũng từng là một người mẹ loay hoay..."',
-  p1: "Tôi thấy nhiều mẹ mua App về con không học, mua sách về mẹ không biết dạy. Tôi hiểu rằng nếu thiếu sự GẮN KẾT, mọi công nghệ đều vô nghĩa.",
+  p1: "Tôi thấy nhiều mẹ mua App về con không học, mua sách về mẹ không biết dạy. Tôi hiểu rằng nếu thiếu NIỀM VUI và sự GẮN KẾT, mọi công nghệ đều vô nghĩa.",
   p2: "Nhưng nếu chỉ có gắn kết mà thiếu công cụ chuẩn, mẹ sẽ rất áp lực vì sợ dạy sai. Đó là lúc tôi nhận ra mình cần một công thức kết hợp cả hai thế giới.",
   image: "/images/1.png",
   name: "Teacher Mai Linh",

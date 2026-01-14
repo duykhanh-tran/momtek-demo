@@ -2,7 +2,7 @@ import {
   Facebook, Youtube, Instagram, Star, Video, MessageCircleQuestion, 
   Headphones, Cpu, Hand, Users, Music, Mic, Scissors, BookOpen, 
   Smile, LayoutGrid, Book, BookOpenCheck, Layers, FlaskConical, 
-  GraduationCap, Presentation, Zap, Heart, Award
+  GraduationCap, Presentation, Zap, Heart, Award,
 } from 'lucide-react';
 
 export const SITE_CONFIG = {
@@ -10,9 +10,9 @@ export const SITE_CONFIG = {
   description: "Hệ sinh thái Tiếng Anh Hybrid dành cho cha mẹ và trẻ em.",
 };
 
-// Cập nhật cấu trúc NAV_LINKS có thêm children
+// --- CẬP NHẬT NAV_LINKS ---
 export const NAV_LINKS = [
-  { label: "Hero", href: "/", highlight: false },
+  // { label: "Hero", href: "/", highlight: false },
   { label: "Học viện Cha mẹ", href: "/academy", highlight: false },
   { 
     label: "Năng lực cốt lõi", 
@@ -23,6 +23,7 @@ export const NAV_LINKS = [
       { label: "Phonic AI", href: "/phonic-ai" },
       { label: "Play-lab", href: "/play-lab" },
       { label: "Sách Hybrid", href: "/hybrid-book" },
+      { label: "Đội ngũ Mentor", href: "/mentor" },
     ]
   },
   { 
@@ -33,14 +34,13 @@ export const NAV_LINKS = [
       { label: "Language", href: "/language" },
     ]
   },
-  { label: "Đội ngũ Lãnh đạo", href: "/mentor", highlight: false },
+  { label: "Đội ngũ Lãnh đạo", href: "/teacher", highlight: false },
 ];
 
 export const HERO_CONTENT = {
-  badge: "Tiên phong Blended Learning",
-  title_1: "Mẹ tự tin dạy con tiếng Anh thành công ",
-  title_highlight: "ngay cả khi bắt đầu từ con số 0 ",
-  desc: "Hệ sinh thái toàn diện giúp biến mỗi giờ học tại nhà thành khoảnh khắc gắn kết đầy niềm vui.",
+  badge: "Học tập kết hợp : Sách - App - Mentor",
+  title_1: "Giải pháp giúp Mẹ tự tin dạy con học tiếng Anh tại nhà. ",
+  desc: "Hệ sinh thái toàn diện của momtek biến mỗi giờ học tại nhà thành khoảnh khắc gắn kết đầy niềm vui của mẹ và con .",
   bg_image: "/images/1.png",
 };
 
@@ -53,9 +53,9 @@ export const SOCIAL_PROOF_LOGOS = [
 
 export const PAIN_POINTS = [
   { icon: "😟", title: "Thiếu tự tin", desc: "Sợ phát âm sai ảnh hưởng con.", color: "green" },
-  { icon: "😵‍💫", title: "Loạn phương pháp", desc: "Không biết bắt đầu từ đâu.", color: "orange" },
-  { icon: "⏳", title: "Thiếu thời gian", desc: "Bận rộn, áp lực công việc.", color: "blue" },
-  { icon: "📱", title: "Nỗi lo Screen-time", desc: "Sợ con nghiện thiết bị điện tử.", color: "purple" },
+  { icon: "😵‍💫", title: "Loạn phương pháp", desc: "Mẹ không biết bắt đầu từ đâu.", color: "orange" },
+  { icon: "⏳", title: "Thiếu thời gian", desc: "Mẹ bận rộn, áp lực công việc.", color: "blue" },
+  { icon: "📱", title: "Nỗi lo Screen-time", desc: "Mẹ sợ con nghiện thiết bị điện tử.", color: "purple" },
 ];
 
 export const RESOURCES = [
@@ -87,27 +87,27 @@ export const RESOURCES = [
 
 export const METHODOLOGY_PILLARS = [
   {
-    id: "tech", name: "1. Công nghệ (Tech)", desc: "Môi trường \"tắm\" ngôn ngữ và luyện âm chuẩn xác với AI độc quyền.",
+    id: "tech", name: "1. Công nghệ (Tech)", desc: "Môi trường \"tắm\" ngôn ngữ và luyện âm chuẩn xác với AI độc quyền đến từ Microsoft và đội ngũ thiết kế chuyên nghiệp",
     icon: Cpu, bgIcon: "smartphone", color: "blue",
     links: [
       { text: "Vocab Song", icon: Music },
-      { text: "Thử chấm điểm AI", icon: Mic }
+      { text: "Phonic AI", icon: Mic }
     ]
   },
   {
-    id: "touch", name: "2. Tương tác (Touch)", desc: "Kết nối thế giới thực, giúp bé rời xa màn hình và phát triển vận động tinh.",
-    icon: Hand, bgIcon: "package", color: "orange",
+    id: "coursebook", name: "2. Học liệu (Coursebook)", desc: "Các sách vở được thiết kế,bài bản,bám sát chương trình Cambridge và được phê duyệt bởi thầy Hoàng Tăng Đức ",
+    icon: BookOpen, bgIcon: "package", color: "orange",
     links: [
       { text: "Play Lab (DIY)", icon: Scissors },
       { text: "Sách & Flashcard", icon: BookOpen }
     ]
   },
   {
-    id: "human", name: "3. Con người (Human)", desc: "Đội ngũ chuyên gia tận tâm, đồng hành sửa lỗi và giữ lửa cho mẹ.",
-    icon: Heart, bgIcon: "users", color: "green",
+    id: "human", name: "3. Giáo viên ( Mentor )", desc: "Đội ngũ chuyên gia Online,vững chuyên môn,tận tâm,sẵn sàng đồng hành sửa lỗi và giữ lửa cho mẹ ",
+    icon: Heart, bgIcon: "users", color: "purple",
     links: [
       { text: "Gặp gỡ đội ngũ Mentor", icon: Smile },
-      { text: "Quy trình Huấn luyện 1-1", icon: Video }
+      { text: "Quy trình Huấn luyện ", icon: Video }
     ]
   },
 ];
@@ -115,13 +115,13 @@ export const METHODOLOGY_PILLARS = [
 export const PRODUCTS = {
   single: [
     { title: "Sing by Zalo", desc: "Học hát qua Zalo", icon: Music },
-    { title: "Phonic Blend", desc: "Sách ghép vần", icon: Book },
-    { title: "Story Blend", desc: "Truyện tương tác", icon: BookOpenCheck },
+    { title: "Phonic Blend", desc: "Sách ngữ âm kết hợp On-Off", icon: Book },
+    { title: "Story Blend", desc: "Truyện tương tác kết hợp On-Off", icon: BookOpenCheck },
   ],
-  bundle: {
-    title: "Bộ Momtek Language", desc: "Giải pháp 3-trong-1 chủ lực", icon: Star, highlight: "Phổ biến nhất"
-    
-  },
+  bundle: [
+    {title: " Momtek Language", desc: "Học tập 4 kỹ năng , đầu ra Pre Starters", icon: Star, highlight: "Phổ biến nhất"},
+    {title: " Momtek STEM", desc: "Sắp ra mắt ", icon:FlaskConical , highlight: "Phổ biến nhất"},
+  ],
   training: [
     { title: "Class Online 1-1", desc: "Học trực tiếp với giáo viên", icon: Video },
     { title: "Workshop Chuyên đề", desc: "Đào tạo theo chủ đề", icon: Presentation },
@@ -131,16 +131,25 @@ export const PRODUCTS = {
 
 export const FOUNDERS = [
   {
-    name: "Mrs. Mai Linh ", role: "Co-Founder", title: "Người truyền lửa",
-    quote: "Giáo dục không chỉ là đổ đầy kiến thức, mà là thắp lên ngọn lửa.",
+    name: "Teacher. Mai Linh ", 
+    role: "Co-Founder", 
+    title: "Người truyền lửa",
+    quote: "Giáo dục không chỉ là đổ đầy kiến thức, mà là thắp lên ngọn lửa.Tôi ở đây để giúp mẹ tự tin trở thành người thầy đầu tiên của con.",
     image: "/images/FD.jpg",
-    color: "orange", icon: Heart
+    color: "orange", 
+    icon1: Heart,
+    icon2: GraduationCap
   },
   {
-    name: "ThS. Hoàng Tăng Đức ", role: "Co-Founder", title: "Kiến trúc sư chương trình",
-    quote: "Chúng tôi đưa những phương pháp sư phạm tiên tiến nhất thế giới vào Momtek.",
+    name: "ThS. Hoàng Tăng Đức ",
+    role: "Co-Founder",
+    roleExtra: "TOP VN",
+    title: "Kiến trúc sư chương trình",
+    quote: "Chúng tôi đưa những phương pháp sư phạm tiên tiến nhất thế giới vào Momtek, đảm bảo mỗi giờ học đều mang lại hiệu quả tối ưu cho con.",
     image: "/images/FD.jpg",
-    color: "blue", icon: Award
+    color: "blue",
+    icon1: Award,
+    icon2: Layers
   }
 ];
 

@@ -25,7 +25,7 @@ export default function SelectionProcess() {
     <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
             <div className="text-center mb-16 max-w-3xl mx-auto">
-                <h2 className="text-3xl font-black text-slate-900 mb-4">Quy trình tuyển chọn khắt khe với "Tiêu chuẩn 3H"</h2>
+                <h2 className="text-3xl font-black text-slate-900 mb-4">Tiêu chuẩn Mentor</h2>
                 <p className="text-slate-500">Tại Momtek, bằng cấp là điều kiện cần, nhưng tình yêu thương mới là điều kiện đủ. Chỉ top 5% ứng viên xuất sắc nhất được lựa chọn.</p>
             </div>
 

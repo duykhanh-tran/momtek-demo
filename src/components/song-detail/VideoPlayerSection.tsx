@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { Play, Music, BookOpen, Moon, Mic2, ChevronDown } from 'lucide-react';
 import { SONG_DETAIL, SCRIPTS } from '@/lib/song-detail-data';
@@ -12,9 +12,8 @@ const VideoPlayerSection = () => {
   const [isScriptOpen, setIsScriptOpen] = useState(false);
 
   return (
-    <section className="pt-20 md:pt-28 pb-4 md:pb-8 relative z-10">
-      <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-        
+    <section className="pt-20 md:pt-28 pb-8 md:pb-12 relative z-10 bg-gradient-to-b from-blue-900/90 to-slate-900/95">
+      <div className="container mx-auto px-4 md:px-6 max-w-4xl relative z-10">
         {/* Video Thumbnail */}
         <div 
           onClick={() => openVideo(SONG_DETAIL.videoUrl)}
@@ -29,10 +28,12 @@ const VideoPlayerSection = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 md:w-20 md:h-20 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition z-20">
             <Play className="w-6 h-6 md:w-8 md:h-8 text-slate-900 fill-current ml-1" />
           </div>
+
+
         </div>
 
         {/* Mode Switcher */}
-        <div className="flex items-center justify-between gap-2 bg-slate-200/60 p-1.5 rounded-xl mb-4">
+        <div className="flex items-center justify-between gap-2 bg-gradient-to-r from-blue-400/90 to-blue-500/90 p-2 rounded-xl mb-6 shadow-lg border-2 border-blue-300/50">
           {[
             { id: 'song', icon: Music, label: 'Song' },
             { id: 'story', icon: BookOpen, label: 'Story' },
@@ -41,10 +42,10 @@ const VideoPlayerSection = () => {
             <button 
               key={mode.id}
               onClick={() => setActiveMode(mode.id as any)}
-              className={`flex-1 py-2 rounded-lg text-xs md:text-sm font-bold border border-transparent transition-all flex items-center justify-center gap-1.5
+              className={`flex-1 py-2.5 rounded-lg text-xs md:text-sm font-bold border transition-all flex items-center justify-center gap-1.5
                 ${activeMode === mode.id 
-                  ? 'bg-white text-blue-600 shadow-sm border-blue-100' 
-                  : 'text-slate-500 hover:text-slate-700'
+                  ? 'bg-white text-blue-600 shadow-md border-white' 
+                  : 'text-white/70 hover:text-white border-transparent'
                 }
               `}
             >
@@ -54,7 +55,7 @@ const VideoPlayerSection = () => {
         </div>
 
         {/* Lyrics Accordion */}
-        <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-300">
+        <div className="bg-white rounded-xl border-2 border-blue-300/50 shadow-lg overflow-hidden transition-all duration-300">
           <button 
             onClick={() => setIsScriptOpen(!isScriptOpen)} 
             className="w-full px-4 py-3 flex items-center justify-between bg-slate-50 hover:bg-slate-100 transition"

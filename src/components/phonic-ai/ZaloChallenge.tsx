@@ -3,7 +3,7 @@ import { Phone, Send } from 'lucide-react';
 
 const ZaloChallenge = () => {
   return (
-    <section id="zalo-challenge" className="py-12 bg-gradient-to-b from-slate-900 to-slate-950">
+    <section id="zalo-challenge" className="py-12 bg-white">
       <div className="container mx-auto px-6">
         <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 rounded-3xl p-8 md:p-12 relative overflow-hidden border border-blue-500/30 shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-[100px] opacity-20"></div>

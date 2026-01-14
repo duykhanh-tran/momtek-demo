@@ -9,10 +9,10 @@ const ProductShowcase = () => {
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <span className="text-blue-600 font-extrabold tracking-widest uppercase text-sm mb-3 block">Danh mục Sản phẩm</span>
           <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight">
-            Bạn đang tìm kiếm điều gì?
+            Mẹ đang tìm kiếm điều gì?
           </h2>
           <p className="text-lg text-slate-500">
-            Tất cả sản phẩm đều được thiết kế độc lập. Hãy chọn đúng công cụ bạn cần để bổ trợ cho bé.
+            Tất cả sản phẩm đều được thiết kế độc lập. Hãy chọn đúng công cụ Mẹ cần để bổ trợ cho con tốt nhất 
           </p>
         </div>
 
@@ -25,8 +25,8 @@ const ProductShowcase = () => {
               <div className="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6">
                 <LayoutGrid className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Kho sách & Ứng dụng</h3>
-              <p className="text-slate-500 text-sm mb-6">Các sản phẩm lẻ giúp bé làm quen tiếng Anh nhẹ nhàng.</p>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Chương trình Cơ bản </h3>
+              <p className="text-slate-500 text-sm mb-6">Các bộ sản phẩm phục vụ từng kỹ năng riêng biệt,để con từng bước làm quen tiếng Anh.</p>
               
               <div className="space-y-3 mt-auto">
                 {PRODUCTS.single.map((item, idx) => (
@@ -58,32 +58,32 @@ const ProductShowcase = () => {
                 <Layers className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Giải pháp Toàn diện</h3>
-              <p className="text-slate-300 text-sm mb-6">Các bộ giải pháp kết hợp Tech-Touch-Human để đảm bảo đầu ra.</p>
-              
+              <p className="text-slate-300 text-sm mb-6">Các chương trình học tập tại nhà toàn diện,tạo dựng nền tảng 4 kỹ năng theo chuẩn Cambridge.</p>
+            
               <div className="space-y-4 mt-auto">
                 <div className="flex items-center justify-between p-4 bg-slate-800 rounded-xl hover:bg-blue-600 transition group/item cursor-pointer border border-slate-600 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-900/50">
                   <div className="flex items-center gap-3">
                     <div className="bg-blue-900/50 p-2 rounded-lg text-blue-400 group-hover/item:text-white group-hover/item:bg-white/20">
-                      <PRODUCTS.bundle.icon className="w-6 h-6" />
+                      {React.createElement(PRODUCTS.bundle[0].icon, { className: "w-6 h-6 text-yellow-500 " })}
                     </div>
                     <div>
-                      <h4 className="font-bold text-white text-base">{PRODUCTS.bundle.title}</h4>
-                      <p className="text-[11px] text-slate-400 group-hover/item:text-blue-100">{PRODUCTS.bundle.desc}</p>
+                      <h4 className="font-bold text-white text-base">{PRODUCTS.bundle[0].title}</h4>
+                      <p className="text-[11px] text-slate-400 group-hover/item:text-blue-100">{PRODUCTS.bundle[0].desc}</p>
                     </div>
                   </div>
                   <ArrowRight className="w-5 h-5 text-slate-500 group-hover/item:text-white" />
                 </div>
               </div>
 
-              <div className="space-y-4 mt-auto">
-                <div className="flex items-center justify-between p-4 bg-slate-800 rounded-xl hover:bg-blue-600 transition group/item cursor-pointer border border-slate-600 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-900/50">
+               <div className="space-y-4 mt-auto">
+                <div className="flex items-center justify-between p-4 bg-slate-800 rounded-xl cursor-pointer border border-slate-600">
                   <div className="flex items-center gap-3">
-                    <div className="bg-blue-900/50 p-2 rounded-lg text-blue-400 group-hover/item:text-white group-hover/item:bg-white/20">
-                      <PRODUCTS.bundle.icon className="w-6 h-6" />
+                    <div className="bg-blue-900/50 p-2 rounded-lg  ">
+                      {React.createElement(PRODUCTS.bundle[1].icon, { className: "w-6 h-6" })}
                     </div>
                     <div>
-                      <h4 className="font-bold text-white text-base">{PRODUCTS.bundle.title}</h4>
-                      <p className="text-[11px] text-slate-400 group-hover/item:text-blue-100">{PRODUCTS.bundle.desc}</p>
+                      <h4 className="font-bold text-slate-500 text-base">{PRODUCTS.bundle[1].title}</h4>
+                      <p className="text-[11px] text-slate-400 group-hover/item:text-blue-100">{PRODUCTS.bundle[1].desc}</p>
                     </div>
                   </div>
                   <ArrowRight className="w-5 h-5 text-slate-500 group-hover/item:text-white" />
@@ -105,7 +105,7 @@ const ProductShowcase = () => {
                 <GraduationCap className="w-7 h-7" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Đào tạo Chuyên sâu</h3>
-              <p className="text-slate-500 text-sm mb-6">Dịch vụ huấn luyện 1-1 và các Workshop kỹ năng đặc biệt.</p>
+              <p className="text-slate-500 text-sm mb-6">Các khóa học Online 1-1 cùng chuyên gia và các Workshop kỹ năng đặc biệt cho Phụ huynh.</p>
               
               <div className="space-y-3 mt-auto">
                 {PRODUCTS.training.map((item, idx) => (

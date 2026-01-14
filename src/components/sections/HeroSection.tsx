@@ -21,9 +21,7 @@ const HeroSection = () => {
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
             {HERO_CONTENT.title_1} 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">
-              {HERO_CONTENT.title_highlight}
-            </span>
+            
           </h1> 
           <p className="text-lg text-slate-300 max-w-lg mx-auto md:mx-0 font-medium">
             {HERO_CONTENT.desc}
@@ -36,7 +34,7 @@ const HeroSection = () => {
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl shadow-orange-500/20 transition hover:-translate-y-1 flex items-center justify-center gap-2 group"
             >
               <Sparkles className="w-5 h-5 group-hover:animate-spin" /> 
-              Khám phá Phong cách Dạy con
+              Quiz Phong cách Dạy Con
             </button>
             
             {/* Nút mở Video */}
@@ -47,7 +45,7 @@ const HeroSection = () => {
               <span className="bg-white text-blue-900 rounded-full p-1 group-hover:scale-110 transition duration-300">
                 <Play className="w-3 h-3 fill-current ml-0.5" />
               </span> 
-              Xem Video Intro
+              Xem Video 
             </button>
           </div>
           <div className="pt-4 flex items-center justify-center md:justify-start gap-6 opacity-80 text-xs text-slate-400">

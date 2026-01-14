@@ -37,10 +37,11 @@ const HybridHero = () => {
             </span>
             <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight italic">
                 {HYBRID_HERO.title_1}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">
+                
+                 <br className="hidden md:block" /> {HYBRID_HERO.title_2}
+                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">
                     {HYBRID_HERO.title_highlight}
                  </span>
-                 <br className="hidden md:block" /> {HYBRID_HERO.title_2}
             </h1>
             <p className="text-slate-400 text-lg font-light max-w-2xl leading-relaxed italic mb-8 mx-auto md:mx-0">
                 "{HYBRID_HERO.desc}"

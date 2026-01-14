@@ -6,20 +6,20 @@ const Community = () => {
   return (
     <section id="social-proof" className="py-20 bg-white border-t border-slate-100">
       <div className="container mx-auto px-6 text-center">
-        <span className="text-orange-500 font-bold uppercase tracking-widest text-xs mb-2 block">Connect & Learn</span>
-        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+        <span className="text-blue-600 font-extrabold tracking-widest uppercase text-sm mb-3 block">Connect & Learn</span>
+        <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight">
           Cộng đồng Momtek
         </h2>
-        <p className="text-slate-500 max-w-2xl mx-auto mb-12">
-          Kết nối, học hỏi và chia sẻ kinh nghiệm cùng hàng chục ngàn gia đình Việt Nam khác.
+        <p className="text-slate-500 max-w-2xl mx-auto mb-6">
+          Kết nối, học hỏi và chia sẻ kinh nghiệm cùng hàng chục ngàn gia đình Việt Nam khác.Đừng bỏ <br /> lỡ các video hướng dẫn miễn phí mỗi ngày. <br />#momtek #medaycontienganh
         </p>
 
-        <a href="#" className="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-blue-600 transition hover:border-blue-600 pb-0.5">
+        <a href="#" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5">
           <ThumbsUp className="w-4 h-4" /> Theo dõi Momtek trên Mạng xã hội
         </a>
 
         {/* Stats - Giữ nguyên layout grid hoặc flex wrap cho stats vì nó nhỏ */}
-        <div className="mb-12 md:mb-24 mt-12 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4">
+        <div className="mb-8 md:mb-24 mt-12 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4">
            <div className="flex justify-center items-center space-x-3">
              <div className="text-3xl font-bold">50K+</div>
              <div className="text-sm text-gray-500 text-left">Followers</div>

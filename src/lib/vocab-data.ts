@@ -2,9 +2,9 @@ import { Eye, ListMusic, LayoutGrid, Gamepad2, Files, Music, Lock ,Package , Boo
 
 export const VOCAL_HERO = {
   label: "Câu chuyện sáng lập",
-  title_1: "Chúng tôi không viết nhạc để giải trí ",
-  title_2: "Chúng tôi viết để  ",
-  title_highlight: "khắc ghi ngôn ngữ  ", 
+  title_1: "Momtek không viết nhạc để giải trí ",
+  title_2: "Momtek viết để trẻ  ",
+  title_highlight: "khắc ghi ngôn ngữ.", 
   desc: "Mỗi nốt nhạc, mỗi lời bài hát tại Momtek đều được tinh chỉnh để giúp nào bộ trẻ thư giãn và tiếp thu sau nhất ",
   author: "Teacher.Mai Linh",
   role: "Founder Momtek",
