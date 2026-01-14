@@ -1,4 +1,3 @@
-// components/about/MissionVision.tsx
 import React from "react";
 
 type MissionVisionProps = {
@@ -15,25 +14,25 @@ export default function MissionVision({
   visionText = "Trở thành người bạn đồng hành đáng tin cậy nhất trong tủ sách và trong tim của mọi gia đình Việt, kiến tạo một thế hệ trẻ em yêu thích học hỏi và gắn kết sâu sắc với ba mẹ.",
 }: MissionVisionProps) {
   return (
-    <section className="bg-slate-50">
-      {/* giống ảnh: một khối trắng, viền nhẹ, có padding lớn và 2 cột */}
-      <div className="mx-auto max-w-6xl px-6 py-10 md:py-12">
-        <div className="rounded-xl  border-slate-200 bg-slate-50 px-6 py-6 md:px-10 md:py-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+    <section className="bg-slate-50 w-full">
+      <div className="container mx-auto px-4 md:px-6 py-10 md:py-12">
+        <div className="rounded-xl  bg-slate-50  px-6 py-8 md:px-10 md:py-12">
+          {/* Grid responsive: 1 cột trên mobile, 2 cột trên tablet/desktop */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
             <div>
-              <h3 className="text-xl font-extrabold text-blue-900">
+              <h3 className="text-xl md:text-2xl font-extrabold text-blue-900 mb-3">
                 {missionTitle}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+              <p className="text-sm md:text-base leading-relaxed text-slate-600 text-justify">
                 {missionText}
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl font-extrabold text-blue-900">
+              <h3 className="text-xl md:text-2xl font-extrabold text-blue-900 mb-3">
                 {visionTitle}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+              <p className="text-sm md:text-base leading-relaxed text-slate-600 text-justify">
                 {visionText}
               </p>
             </div>

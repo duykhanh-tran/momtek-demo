@@ -1,5 +1,4 @@
-// components/about/CallToActionBanner.tsx
-import Link from "next/link";
+import React from "react";
 
 type CallToActionBannerProps = {
   title?: string;
@@ -21,34 +20,32 @@ export default function CallToActionBanner({
   secondaryHref = "/lien-he",
 }: CallToActionBannerProps) {
   return (
-    <section className="bg-blue-100">
-      <div className="mx-auto max-w-4xl px-4 py-10 md:py-16">
-        <div className="rounded-2xl bg-blue-100 px-4 py-8 text-center md:px-12 md:py-12">
-          <h2 className="text-3xl font-extrabold text-slate-900 md:text-2xl">
+    <section className="bg-blue-100 w-full">
+      <div className="container mx-auto px-4 md:px-6 py-10 md:py-16">
+        <div className="rounded-2xl bg-white/50 md:bg-transparent px-4 py-8 text-center md:px-12 md:py-12">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 px-2">
             {title}
           </h2>
 
-          <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">
+          <p className="mx-auto mt-4 max-w-2xl text-sm md:text-base leading-relaxed text-slate-600 px-2">
             {subtitle}
-            <br />
-            {subtitle1}
+            <span className="block md:inline">{subtitle1}</span>
           </p>
           
-
-          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row w-full sm:w-auto">
+            <a
               href={primaryHref}
-              className="inline-flex h-10 items-center justify-center rounded-full bg-amber-400 px-6 text-sm font-semibold text-slate-900 shadow-sm transition hover:brightness-95 active:brightness-90"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-amber-400 px-8 text-sm font-bold text-slate-900 shadow-md transition hover:bg-amber-300 active:scale-95 no-underline"
             >
               {primaryText}
-            </Link>
+            </a>
 
-            <Link
+            <a
               href={secondaryHref}
-              className="text-sm font-semibold text-slate-700 hover:text-slate-900"
+              className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full border border-slate-300 sm:border-transparent text-sm font-semibold text-slate-700 hover:text-slate-900 hover:bg-white/50 transition no-underline"
             >
               {secondaryText}
-            </Link>
+            </a>
           </div>
         </div>
       </div>

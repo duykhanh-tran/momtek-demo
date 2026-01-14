@@ -1,13 +1,11 @@
-// components/about/TeamSection.tsx
-import Image from "next/image";
 import React from "react";
 
 export type TeamMember = {
   id: number | string;
   name: string;
-  role: string; // dòng xanh
+  role: string;
   quote: string;
-  avatar: string; // /public/...
+  avatar: string;
 };
 
 type TeamSectionProps = {
@@ -21,7 +19,7 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     name: "Nguyễn Khánh Hà",
     role: "Giám đốc",
     quote:
-      "“Với tầm nhìn nghiêm trọng lĩnh vực giáo dục, tôi tin rằng sứ mệnh của ba mẹ là chìa khoá tốt nhất cho sự phát triển của con.”",
+      "“Với tầm nhìn nghiêm túc trong lĩnh vực giáo dục, tôi tin rằng sứ mệnh của ba mẹ là chìa khoá tốt nhất cho sự phát triển của con.”",
     avatar: "/images/FD.jpg",
   },
   {
@@ -29,7 +27,7 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     name: "Nguyễn Thu Hằng",
     role: "Trưởng nhóm Sản phẩm",
     quote:
-      "“Phương pháp của Momtek được xây dựng trên nền tảng khoa học và tâm lý và phát triển ngôn ngữ của trẻ.”",
+      "“Phương pháp của Momtek được xây dựng trên nền tảng khoa học tâm lý và phát triển ngôn ngữ của trẻ.”",
     avatar: "/images/FD.jpg",
   },
   {
@@ -43,7 +41,7 @@ const DEFAULT_MEMBERS: TeamMember[] = [
   {
     id: 4,
     name: "Nguyễn Bá Sơn",
-    role: "Trưởng nhóm Thiết kế",
+    role: "Trưởng nhóm Kỹ thuật",
     quote:
       "“Chúng tôi tự hào mang đến công nghệ AI luyện âm tiên tiến để hỗ trợ các gia đình Việt Nam.”",
     avatar: "/images/FD.jpg",
@@ -55,34 +53,36 @@ export default function TeamSection({
   members = DEFAULT_MEMBERS,
 }: TeamSectionProps) {
   return (
-    <section className="bg-white">
-      <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
-        <h2 className="text-center text-xl font-extrabold text-slate-900 md:text-2xl">
+    <section className="bg-white w-full">
+      <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
+        <h2 className="text-center text-xl md:text-2xl font-extrabold text-slate-900 mb-10 md:mb-12">
           {title}
         </h2>
 
-        <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-8">
+        {/* Thay đổi quan trọng:
+           - Chuyển sang Grid responsive để hình ảnh và text hiển thị rõ ràng, không bị trượt ngang khuất màn hình.
+        */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-8">
           {members.map((m) => (
-            <div key={m.id} className="text-center">
-              <div className="mx-auto h-16 w-16 overflow-hidden rounded-full ring-1 ring-black/5">
-                <Image
+            <div key={m.id} className="flex flex-col items-center text-center group">
+              <div className="relative h-20 w-20 md:h-24 md:w-24 overflow-hidden rounded-full ring-4 ring-slate-50 shadow-sm mb-4 group-hover:scale-105 transition-transform duration-300">
+                <img
                   src={m.avatar}
                   alt={m.name}
-                  width={64}
-                  height={64}
-                  className="h-full w-full object-cover"
+                  className="object-cover w-full h-full"
                 />
               </div>
 
-              <p className="mt-3 text-sm font-bold text-slate-900">{m.name}</p>
-              <p className="text-xs font-semibold text-blue-600">{m.role}</p>
+              <h3 className="text-base font-bold text-slate-900">{m.name}</h3>
+              <p className="text-xs font-bold uppercase tracking-wider text-blue-600 mt-1 mb-3">{m.role}</p>
 
-              <p className="mt-3 text-xs leading-relaxed text-slate-600">
+              <p className="text-xs md:text-sm leading-relaxed text-slate-600 px-2 italic">
                 {m.quote}
               </p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
