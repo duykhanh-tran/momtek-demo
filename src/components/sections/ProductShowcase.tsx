@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'; // Import Link
 import { LayoutGrid, GraduationCap, ChevronRight, ArrowRight, MessageCircle, Layers, BookOpen } from 'lucide-react';
 import { PRODUCTS } from '@/lib/constants';
 
@@ -14,10 +15,10 @@ const ProductShowcase = () => {
           <p className="text-lg text-slate-500">
             Tất cả sản phẩm đều được thiết kế độc lập. Hãy chọn đúng công cụ Mẹ cần để bổ trợ cho con tốt nhất 
           </p>
-          <a href="/products" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5 pt-4">
+          <Link href="/products" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5 pt-4">
             <BookOpen className="w-4 h-4 " />
             Hãy xem sản phẩm  của chúng tôi 
-          </a>
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
@@ -34,7 +35,12 @@ const ProductShowcase = () => {
               
               <div className="space-y-3 mt-auto">
                 {PRODUCTS.single.map((item, idx) => (
-                  <div key={idx} className="flex items-center justify-between p-4 bg-orange-50 rounded-xl hover:bg-orange-500 hover:text-white transition group/item cursor-pointer border border-orange-100">
+                  // CẬP NHẬT: Dùng Link thay cho div
+                  <Link 
+                    key={idx} 
+                    href={item.href}
+                    className="flex items-center justify-between p-4 bg-orange-50 rounded-xl hover:bg-orange-500 hover:text-white transition group/item cursor-pointer border border-orange-100"
+                  >
                     <div className="flex items-center gap-3">
                       <div className="bg-white p-2 rounded-lg text-orange-500 shadow-sm"><item.icon className="w-5 h-5" /></div>
                       <div>
@@ -43,12 +49,12 @@ const ProductShowcase = () => {
                       </div>
                     </div>
                     <ChevronRight className="w-5 h-5 text-orange-300 group-hover/item:text-white" />
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
             <div className="p-6 pt-0 mt-2">
-               <a href="#" className="block text-center text-xs font-bold text-slate-400 hover:text-orange-500">Xem tất cả sách &rarr;</a>
+               <Link href="/products" className="block text-center text-xs font-bold text-slate-400 hover:text-orange-500">Xem tất cả sách &rarr;</Link>
             </div>
           </div>
 
@@ -65,7 +71,11 @@ const ProductShowcase = () => {
               <p className="text-slate-300 text-sm mb-6">Các chương trình học tập tại nhà toàn diện,tạo dựng nền tảng 4 kỹ năng theo chuẩn Cambridge.</p>
             
               <div className="space-y-4 mt-auto">
-                <div className="flex items-center justify-between p-4  rounded-xl bg-blue-600 transition group/item cursor-pointer border border-slate-600 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-900/50">
+                {/* Bundle Item 1 */}
+                <Link 
+                  href={PRODUCTS.bundle[0].href}
+                  className="flex items-center justify-between p-4 rounded-xl bg-blue-600 transition group/item cursor-pointer border border-slate-600 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-900/50"
+                >
                   <div className="flex items-center gap-3">
                     <div className="bg-blue-900/50 p-2 rounded-lg text-white">
                       {React.createElement(PRODUCTS.bundle[0].icon, { className: "w-6 h-6 text-yellow-500 " })}
@@ -76,28 +86,30 @@ const ProductShowcase = () => {
                     </div>
                   </div>
                   <ArrowRight className="w-5 h-5  text-white" />
-                </div>
-              </div>
+                </Link>
 
-               <div className="space-y-4 mt-auto">
-                <div className="flex items-center justify-between p-4 bg-slate-800 rounded-xl cursor-pointer border border-slate-600">
+                {/* Bundle Item 2 */}
+                <Link 
+                  href={PRODUCTS.bundle[1].href}
+                  className="flex items-center justify-between p-4 bg-slate-800 rounded-xl cursor-pointer border border-slate-600 hover:bg-slate-700 transition group/item"
+                >
                   <div className="flex items-center gap-3">
                     <div className="bg-blue-900/50 p-2 rounded-lg  ">
                       {React.createElement(PRODUCTS.bundle[1].icon, { className: "w-6 h-6" })}
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-500 text-base">{PRODUCTS.bundle[1].title}</h4>
+                      <h4 className="font-bold text-slate-500 text-base group-hover/item:text-slate-300">{PRODUCTS.bundle[1].title}</h4>
                       <p className="text-[11px] text-slate-400 group-hover/item:text-blue-100">{PRODUCTS.bundle[1].desc}</p>
                     </div>
                   </div>
                   <ArrowRight className="w-5 h-5 text-slate-500 group-hover/item:text-white" />
-                </div>
+                </Link>
               </div>
             </div>
              <div className="p-8 pt-0 mt-2 relative">
-                <button className="w-full text-blue-400 hover:text-white text-sm font-bold flex items-center justify-center gap-2 py-3 rounded-lg hover:bg-white/10 transition">
+                <Link href="/lien-he" className="w-full text-blue-400 hover:text-white text-sm font-bold flex items-center justify-center gap-2 py-3 rounded-lg hover:bg-white/10 transition">
                   <MessageCircle className="w-4 h-4" /> Cần tư vấn chọn gói?
-                </button>
+                </Link>
            </div>
           </div>
 
@@ -113,7 +125,12 @@ const ProductShowcase = () => {
               
               <div className="space-y-3 mt-auto">
                 {PRODUCTS.training.map((item, idx) => (
-                  <div key={idx} className="flex items-center justify-between p-4 bg-purple-50 rounded-xl hover:bg-purple-600 hover:text-white transition group/item cursor-pointer border border-purple-100">
+                  // CẬP NHẬT: Dùng Link thay cho div
+                  <Link 
+                    key={idx} 
+                    href={item.href}
+                    className="flex items-center justify-between p-4 bg-purple-50 rounded-xl hover:bg-purple-600 hover:text-white transition group/item cursor-pointer border border-purple-100"
+                  >
                     <div className="flex items-center gap-3">
                       <div className="bg-white p-2 rounded-lg text-purple-600 shadow-sm"><item.icon className="w-5 h-5" /></div>
                       <div>
@@ -122,12 +139,12 @@ const ProductShowcase = () => {
                       </div>
                     </div>
                     <ChevronRight className="w-5 h-5 text-purple-300 group-hover/item:text-white" />
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
              <div className="p-6 pt-0 mt-2">
-                <a href="#" className="block text-center text-xs font-bold text-slate-400 hover:text-purple-600">Liên hệ Booking &rarr;</a>
+                <Link href="/lien-he" className="block text-center text-xs font-bold text-slate-400 hover:text-purple-600">Liên hệ Booking &rarr;</Link>
            </div>
           </div>
 

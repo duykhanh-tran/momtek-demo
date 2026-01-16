@@ -114,18 +114,18 @@ export const METHODOLOGY_PILLARS = [
 
 export const PRODUCTS = {
   single: [
-    { title: "Sing by Zalo", desc: "Học hát qua Zalo", icon: Music },
-    { title: "Phonic Blend", desc: "Sách ngữ âm kết hợp On-Off", icon: Book },
-    { title: "Story Blend", desc: "Truyện tương tác kết hợp On-Off", icon: BookOpenCheck },
+    { title: "Sing by Zalo", desc: "Học hát qua Zalo",href : "/", icon: Music },
+    { title: "Phonic Blend", desc: "Sách ngữ âm kết hợp On-Off",href : "/", icon: Book },
+    { title: "Story Blend", desc: "Truyện tương tác kết hợp On-Off",href : "/", icon: BookOpenCheck },
   ],
   bundle: [
-    {title: " Momtek Language", desc: "Học tập 4 kỹ năng , đầu ra Pre Starters", icon: Star, highlight: "Phổ biến nhất"},
-    {title: " Momtek STEM", desc: "Sắp ra mắt ", icon:FlaskConical , highlight: "Phổ biến nhất"},
+    {title: " Momtek Language", desc: "Học tập 4 kỹ năng , đầu ra Pre Starters", icon: Star, highlight: "Phổ biến nhất" , href : "/language"},
+    {title: " Momtek STEM", desc: "Sắp ra mắt ", icon:FlaskConical , highlight: "Phổ biến nhất" , href : "/"},
   ],
   training: [
-    { title: "Class Online 1-1", desc: "Học trực tiếp với giáo viên", icon: Video },
-    { title: "Workshop Chuyên đề", desc: "Đào tạo theo chủ đề", icon: Presentation },
-    { title: "Workshop Chuyên đề", desc: "Đào tạo theo chủ đề", icon: BookOpenCheck },
+    { title: "Class Online 1-1", desc: "Học trực tiếp với giáo viên", href : "/" ,icon: Video },
+    { title: "Workshop Chuyên đề", desc: "Đào tạo theo chủ đề",href : "/", icon: Presentation },
+    { title: "Workshop Chuyên đề", desc: "Đào tạo theo chủ đề",href : "/", icon: BookOpenCheck },
   ]
 };
 
@@ -146,7 +146,7 @@ export const FOUNDERS = [
     roleExtra: "TOP VN",
     title: "Kiến trúc sư chương trình",
     quote: "Chúng tôi đưa những phương pháp sư phạm tiên tiến nhất thế giới vào Momtek, đảm bảo mỗi giờ học đều mang lại hiệu quả tối ưu cho con.",
-    image: "/images/FD2.jpg",
+    image: "/images/FD.jpg",
     color: "blue",
     icon1: Award,
     icon2: Layers
