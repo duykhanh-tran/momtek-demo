@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutGrid, GraduationCap, ChevronRight, ArrowRight, MessageCircle, Layers } from 'lucide-react';
+import { LayoutGrid, GraduationCap, ChevronRight, ArrowRight, MessageCircle, Layers, BookOpen } from 'lucide-react';
 import { PRODUCTS } from '@/lib/constants';
 
 const ProductShowcase = () => {
@@ -14,6 +14,10 @@ const ProductShowcase = () => {
           <p className="text-lg text-slate-500">
             Tất cả sản phẩm đều được thiết kế độc lập. Hãy chọn đúng công cụ Mẹ cần để bổ trợ cho con tốt nhất 
           </p>
+          <a href="/products" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5 pt-4">
+            <BookOpen className="w-4 h-4 " />
+            Hãy xem sản phẩm  của chúng tôi 
+          </a>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
@@ -61,17 +65,17 @@ const ProductShowcase = () => {
               <p className="text-slate-300 text-sm mb-6">Các chương trình học tập tại nhà toàn diện,tạo dựng nền tảng 4 kỹ năng theo chuẩn Cambridge.</p>
             
               <div className="space-y-4 mt-auto">
-                <div className="flex items-center justify-between p-4 bg-slate-800 rounded-xl hover:bg-blue-600 transition group/item cursor-pointer border border-slate-600 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-900/50">
+                <div className="flex items-center justify-between p-4  rounded-xl bg-blue-600 transition group/item cursor-pointer border border-slate-600 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-900/50">
                   <div className="flex items-center gap-3">
-                    <div className="bg-blue-900/50 p-2 rounded-lg text-blue-400 group-hover/item:text-white group-hover/item:bg-white/20">
+                    <div className="bg-blue-900/50 p-2 rounded-lg text-white">
                       {React.createElement(PRODUCTS.bundle[0].icon, { className: "w-6 h-6 text-yellow-500 " })}
                     </div>
                     <div>
                       <h4 className="font-bold text-white text-base">{PRODUCTS.bundle[0].title}</h4>
-                      <p className="text-[11px] text-slate-400 group-hover/item:text-blue-100">{PRODUCTS.bundle[0].desc}</p>
+                      <p className="text-[11px]  text-blue-100">{PRODUCTS.bundle[0].desc}</p>
                     </div>
                   </div>
-                  <ArrowRight className="w-5 h-5 text-slate-500 group-hover/item:text-white" />
+                  <ArrowRight className="w-5 h-5  text-white" />
                 </div>
               </div>
 

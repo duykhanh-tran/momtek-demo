@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { BookOpen, ChevronRight } from 'lucide-react';
 import { METHODOLOGY_PILLARS } from '@/lib/constants';
 
@@ -17,10 +18,10 @@ const Methodology = () => {
           <p className="text-lg text-slate-500 mb-6">
             Momtek sở hữu hệ sinh thái Công nghệ - Học liệu - Giáo viên toàn diện để giải quyết mọi rào cản giúp mẹ yên tâm cùng con chinh phục tiếng Anh tại nhà.
           </p>
-          <a href="/hybrid" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5">
+          <Link href="/hybrid" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5">
             <BookOpen className="w-4 h-4" />
             Mô hình học tập Blended Learning 
-          </a>
+          </Link>
         </div>
              
         <div className="grid md:grid-cols-3 gap-8 mb-10">
@@ -35,7 +36,12 @@ const Methodology = () => {
                 
                 <div className="space-y-3">
                   {pillar.links.map((link, idx) => (
-                    <div key={idx} className={`flex items-center justify-between p-3 bg-white/80 rounded-xl hover:bg-${pillar.color}-600 hover:text-white transition group/item cursor-pointer shadow-sm border border-${pillar.color}-100/50`}>
+                    // ĐÃ SỬA: Thay thẻ div bằng thẻ Link để có thể click chuyển trang
+                    <Link 
+                      key={idx} 
+                      href={link.href}
+                      className={`flex items-center justify-between p-3 bg-white/80 rounded-xl hover:bg-${pillar.color}-600 hover:text-white transition group/item cursor-pointer shadow-sm border border-${pillar.color}-100/50`}
+                    >
                       <div className="flex items-center gap-3">
                         <span className={`bg-${pillar.color}-100 text-${pillar.color}-600 p-1.5 rounded-lg group-hover/item:bg-white/20 group-hover/item:text-white`}>
                           <link.icon className="w-4 h-4" />
@@ -43,7 +49,7 @@ const Methodology = () => {
                         <span className="text-sm font-bold">{link.text}</span>
                       </div>
                       <ChevronRight className={`w-4 h-4 text-${pillar.color}-300 group-hover/item:text-white`} />
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>

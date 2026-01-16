@@ -24,7 +24,7 @@ const Founders = () => {
           <br />
             mang đến giải pháp vừa khoa học, vừa giàu tình yêu thương.
           </p>
-          <a href="/hybrid" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5">
+          <a href="/teacher" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 transition border-b border-slate-200 hover:border-blue-600 pb-0.5">
             <BookOpen className="w-4 h-4" />
             Hãy xem câu chuyện của chúng tôi 
           </a>

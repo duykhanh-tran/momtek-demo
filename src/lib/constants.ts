@@ -13,9 +13,9 @@ export const SITE_CONFIG = {
 // --- CẬP NHẬT NAV_LINKS ---
 export const NAV_LINKS = [
   // { label: "Hero", href: "/", highlight: false },
-  { label: "Học viện Cha mẹ", href: "/academy", highlight: false },
+  { label: "Học viện ", href: "/academy", highlight: false },
   { 
-    label: "Năng lực cốt lõi", 
+    label: "Giải pháp", 
     href: "/hybrid", 
     highlight: false,
     children: [
@@ -34,7 +34,7 @@ export const NAV_LINKS = [
       { label: "Language", href: "/language" },
     ]
   },
-  { label: "Đội ngũ Lãnh đạo", href: "/teacher", highlight: false },
+  { label: "Về chúng tôi ", href: "/teacher", highlight: false },
 ];
 
 export const HERO_CONTENT = {
@@ -90,24 +90,24 @@ export const METHODOLOGY_PILLARS = [
     id: "tech", name: "1. Công nghệ (Tech)", desc: "Môi trường \"tắm\" ngôn ngữ và luyện âm chuẩn xác với AI độc quyền đến từ Microsoft và đội ngũ thiết kế chuyên nghiệp",
     icon: Cpu, bgIcon: "smartphone", color: "blue",
     links: [
-      { text: "Vocab Song", icon: Music },
-      { text: "Phonic AI", icon: Mic }
+      { text: "Vocab Song", icon: Music, href: "/vocab" },
+      { text: "Phonic AI", icon: Mic, href: "/phonic-ai" }
     ]
   },
   {
     id: "coursebook", name: "2. Học liệu (Coursebook)", desc: "Các sách vở được thiết kế,bài bản,bám sát chương trình Cambridge và được phê duyệt bởi thầy Hoàng Tăng Đức ",
     icon: BookOpen, bgIcon: "package", color: "orange",
     links: [
-      { text: "Play Lab (DIY)", icon: Scissors },
-      { text: "Sách & Flashcard", icon: BookOpen }
+      { text: "Play Lab (DIY)", icon: Scissors, href: "/play-lab" },
+      { text: "Sách & Flashcard", icon: BookOpen , href: "/hybrid-book" }
     ]
   },
   {
     id: "human", name: "3. Giáo viên ( Mentor )", desc: "Đội ngũ chuyên gia Online,vững chuyên môn,tận tâm,sẵn sàng đồng hành sửa lỗi và giữ lửa cho mẹ ",
     icon: Heart, bgIcon: "users", color: "purple",
     links: [
-      { text: "Gặp gỡ đội ngũ Mentor", icon: Smile },
-      { text: "Quy trình Huấn luyện ", icon: Video }
+      { text: "Gặp gỡ đội ngũ Mentor", icon: Smile, href: "/mentor" },
+      { text: "Quy trình Huấn luyện ", icon: Video, href: "/" }
     ]
   },
 ];
@@ -146,7 +146,7 @@ export const FOUNDERS = [
     roleExtra: "TOP VN",
     title: "Kiến trúc sư chương trình",
     quote: "Chúng tôi đưa những phương pháp sư phạm tiên tiến nhất thế giới vào Momtek, đảm bảo mỗi giờ học đều mang lại hiệu quả tối ưu cho con.",
-    image: "/images/FD.jpg",
+    image: "/images/FD2.jpg",
     color: "blue",
     icon1: Award,
     icon2: Layers
