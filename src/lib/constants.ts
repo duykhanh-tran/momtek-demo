@@ -146,7 +146,7 @@ export const FOUNDERS = [
     roleExtra: "TOP VN",
     title: "Kiến trúc sư chương trình",
     quote: "Chúng tôi đưa những phương pháp sư phạm tiên tiến nhất thế giới vào Momtek, đảm bảo mỗi giờ học đều mang lại hiệu quả tối ưu cho con.",
-    image: "/images/FD.jpg",
+    image: "/images/FD2.jpg",
     color: "blue",
     icon1: Award,
     icon2: Layers
